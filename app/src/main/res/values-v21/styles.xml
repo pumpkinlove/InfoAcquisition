@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue_band_dark</item>
+        <item name="colorPrimaryDark">@color/blue_band_dark2</item>
+        <item name="colorAccent">@color/red_dark</item>
+        <item name="android:statusBarColor">@color/blue_band_dark2</item>
+    </style>
+
+</resources>
