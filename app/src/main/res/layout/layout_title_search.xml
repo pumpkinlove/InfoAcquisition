@@ -1,0 +1,47 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/blue_band_dark"
+    android:layout_height="@dimen/title_height"
+    android:elevation="6dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/title_middle"
+            android:gravity="center_vertical"
+            android:hint=" 输入证件号码搜索客户"
+            android:textSize="18sp"
+            android:textColor="@color/blue_band_dark"
+            android:clickable="true"
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:drawablePadding="10dp"
+            android:paddingStart="15dp"
+            android:inputType="textAutoComplete"
+            android:layout_margin="8dp"
+            android:textColorHint="@color/blue_band_dark2"
+            android:textCursorDrawable="@null" />
+
+        <TextView
+            android:id="@+id/title_search_right"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackgroundBorderless"/>
+
+    </LinearLayout>
+
+</LinearLayout>

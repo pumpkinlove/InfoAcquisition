@@ -5,8 +5,15 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/blue_band_dark</item>
         <item name="colorPrimaryDark">@color/blue_band_dark2</item>
-        <item name="colorAccent">@color/red_dark</item>
+        <item name="colorAccent">@color/white</item>
         <item name="android:statusBarColor">@color/blue_band_dark2</item>
+    </style>
+
+    <style name="style_setting_text">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/blue_band_dark</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:paddingLeft">10.0dip</item>
     </style>
 
 </resources>

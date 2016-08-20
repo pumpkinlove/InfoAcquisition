@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--默认背景-->
+    <!--点击背景-->
+    <item android:state_pressed="true">
+        <shape>
+            <stroke android:color="@color/white"
+                android:width="1px"></stroke>
+            <solid android:color="@color/blue_band_dark3" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <stroke android:color="@color/white"
+                android:width="1px"></stroke>
+        </shape>
+    </item>
+</selector>

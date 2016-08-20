@@ -19,11 +19,12 @@
             android:layout_height="match_parent"
             android:elevation="6dp"
             android:background="@color/white"
+            android:colorControlHighlight="@color/black"
             app:tabBackground="?android:attr/selectableItemBackgroundBorderless"
             app:tabIndicatorColor="@color/blue_band_dark"
             app:tabIndicatorHeight="2dp"
-            app:tabSelectedTextColor="@color/white"
-            app:tabTextColor="@color/gray_dark"
+            app:tabSelectedTextColor="@color/blue_band_dark"
+            app:tabTextColor="@color/blue_band_dark3"
             app:tabGravity="fill"
             app:tabMode="fixed">
 

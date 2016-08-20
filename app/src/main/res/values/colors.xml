@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="white">#FFF</color>
+    <color name="white">#ffffff</color>
     <color name="black">#000</color>
     <color name="yellow">#FF0</color>
     <color name="red">#F00</color>
@@ -14,7 +14,7 @@
     <color name="blue_band_dark2">#4d5d6d</color>
     <color name="blue_band_dark3">#88939e</color>
     <color name="red_dark">#871c21</color>
-    <color name="gray_bg">#BDBDBD</color>
-    <color name="gray_dark">#757575</color>
-
+    <color name="gray_bg">#f0eff5</color>
+    <color name="gray_dark">#bebebe</color>
+    <color name="gray_light">#e6e6e6</color>
 </resources>

@@ -1,6 +1,7 @@
 package com.pump.ia.fragment.serve;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -10,11 +11,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.pump.ia.R;
+import com.pump.ia.activity.serve.SearchActivity;
 import com.pump.ia.adapter.MyFragmentAdapter;
-import com.pump.ia.fragment.BaseFragment;
 
+import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -33,12 +36,17 @@ public class ServeFragment extends Fragment {
     private RuralServeFragment ruralServeFragment;
     private UrbanServeFragment urbanServeFragment;
 
-
-
     @ViewInject(R.id.tl_serve)
     private TabLayout tl_serve;
     @ViewInject(R.id.vp_serve)
     private ViewPager vp_serve;
+
+    @ViewInject(R.id.title_middle)
+    private TextView tv_middleContent;
+    @ViewInject(R.id.title_right)
+    private TextView tv_rightContent;
+    @ViewInject(R.id.title_right_icon)
+    private TextView tv_rightIcon;
 
     public ServeFragment() {
         // Required empty public constructor
@@ -48,28 +56,21 @@ public class ServeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_serve, container, false);
+        View v = inflater.inflate(R.layout.fragment_serve, container, false);
+        x.view().inject(this,v);
+
+        initData();
+        initView();
+
+        return v;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        x.view().inject(view);
-        init();
     }
 
-    private void init(){
-
-        if(tl_serve == null || vp_serve == null){
-            Log.e("=============","null");
-            tl_serve = (TabLayout) getActivity().findViewById(R.id.tl_serve);
-            vp_serve = (ViewPager) getActivity().findViewById(R.id.vp_serve);
-            if(tl_serve == null || vp_serve == null){
-                Log.e("=============","null");
-                return;
-            }
-        }
-
+    private void initData(){
         businessServeFragment = new BusinessServeFragment();
         publicServeFragment = new PublicServeFragment();
         ruralServeFragment = new RuralServeFragment();
@@ -80,12 +81,31 @@ public class ServeFragment extends Fragment {
         fragmentList.add(ruralServeFragment);
         fragmentList.add(businessServeFragment);
         fragmentList.add(publicServeFragment);
-
         adapter = new MyFragmentAdapter(getChildFragmentManager(),fragmentList);
+
+    }
+
+    private void initView(){
         vp_serve.setAdapter(adapter);
         vp_serve.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tl_serve));
         tl_serve.setupWithViewPager(vp_serve);
+        String[] titles = {"城镇客户","农村客户","个体工商户","对公"};
+        for(int i=0; i< tl_serve.getTabCount(); i++){
+            TabLayout.Tab tab = tl_serve.getTabAt(i);
+            if(tab != null){
+                tab.setText(titles[i]);
+            }
+        }
 
+
+        tv_rightContent.setVisibility(View.GONE);
+        tv_rightIcon.setVisibility(View.VISIBLE);
+        tv_middleContent.setText("客户服务");
+    }
+
+    @Event(value = {R.id.title_right_icon}, type = View.OnClickListener.class)
+    private void toSearch(View view){
+        startActivity(new Intent(getActivity(), SearchActivity.class));
     }
 
 }

@@ -5,6 +5,12 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.transition.Explode;
+import android.transition.Fade;
+import android.transition.Slide;
+import android.transition.TransitionSet;
+import android.view.Window;
+
 import com.pump.ia.R;
 import com.pump.ia.adapter.MyFragmentAdapter;
 import com.pump.ia.fragment.form.FormFragment;

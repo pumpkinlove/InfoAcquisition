@@ -1,10 +1,31 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pump.ia.fragment.form.FormFragment">
+    android:orientation="vertical"
+    android:background="@color/gray_bg">
 
     <!-- TODO: Update blank fragment layout -->
     <include layout="@layout/layout_title"/>
 
-</FrameLayout>
+    <Button
+        android:text="城镇居民"
+        android:id="@+id/urbanForm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+        android:text="农村居民"
+        android:id="@+id/ruralForm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+        android:text="个体户"
+        android:id="@+id/businessForm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+        android:text="对公"
+        android:id="@+id/toPublicForm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</LinearLayout>
