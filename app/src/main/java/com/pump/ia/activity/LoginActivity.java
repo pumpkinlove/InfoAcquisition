@@ -2,17 +2,13 @@ package com.pump.ia.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.transition.Fade;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.pump.ia.R;
-import com.pump.ia.activity.form.FormActivity;
 import com.pump.ia.domain.Version;
 import com.pump.ia.utils.CommonUtil;
-import com.pump.ia.utils.XUtil;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
