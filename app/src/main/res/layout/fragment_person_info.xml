@@ -2,12 +2,353 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@null"
     tools:context="com.pump.ia.fragment.form.share.PersonInfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:elevation="6dp"
+        android:layout_margin="3dp"
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="姓名"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:background="@null"
+                android:hint="客户姓名"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="性别"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+            <RadioGroup
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_weight="7"
+                android:orientation="horizontal"
+                android:layout_width="0px"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="男"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:checked="false"
+                    android:textColor="@color/blue_band_light"
+                    android:buttonTint="@color/blue_band_dark2"
+                    android:cursorVisible="false" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:text="女"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/pink"
+                    android:buttonTint="@color/blue_band_dark2" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="民族"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:background="@null"
+                android:hint="民族"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="婚姻状况"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <Spinner
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="150dp"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:spinnerMode="dropdown"
+                android:id="@+id/sp_marry_status" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="证件类型"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <Spinner
+                android:paddingLeft="150dp"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:spinnerMode="dropdown"
+                android:id="@+id/sp_cetificate_type" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="证件号码"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:background="@null"
+                android:hint="证件号码"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="出生日期"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_weight="7"
+                android:hint="出生日期"
+                android:textColor="@color/dark"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:id="@+id/tv_birthday" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="联系方式"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:background="@null"
+                android:hint="联系方式"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="家庭住址"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:background="@null"
+                android:hint="家庭住址"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

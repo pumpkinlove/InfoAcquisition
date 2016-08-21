@@ -3,17 +3,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="51dp"
+    android:elevation="5dp"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/item_form_title"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:hint="item_form_title"
-        android:textColorHint="@color/gray_dark"
-        android:gravity="center|start"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="0px"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/item_form_title"
+            android:textColor="@color/gray_light"
+            android:textSize="18sp"
+            android:paddingLeft="18dp"
+            android:hint="item_form_title"
+            android:textColorHint="@color/gray_dark"
+            android:gravity="center|start"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <View
+            android:id="@+id/direction_line_bottom"
+            android:background="@color/gray_dark"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+    </LinearLayout>
+    <View
 
+        android:id="@+id/direction_line_right"
+        android:background="@color/gray_dark"
+        android:layout_width="1px"
+        android:layout_height="match_parent"/>
 </LinearLayout>

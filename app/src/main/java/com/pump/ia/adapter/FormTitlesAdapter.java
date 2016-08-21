@@ -27,22 +27,22 @@ public class FormTitlesAdapter extends RecyclerView.Adapter<FormTitlesAdapter.Ti
     private TitleClickListener listener;
 
     public FormTitlesAdapter(String[] titles, Context context){
-        Log.e("------------","FormTitlesAdapter");
         this.titles = titles;
         this.context = context;
     }
 
     @Override
     public TitleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Log.e("------------","onCreateViewHolder");
         return new TitleViewHolder(LayoutInflater.from(context).inflate(R.layout.item_form_title, parent, false), listener);
     }
 
     @Override
     public void onBindViewHolder(TitleViewHolder holder, int position) {
-        Log.e("------------","onBindViewHolder");
         holder.tv_title.setText(titles[position]);
-        Log.e("------------","position:"+titles[position]);
+        if(position == 0){
+            holder.tv_title.setBackgroundColor(context.getResources().getColor(R.color.blue_band_light));
+            holder.tv_title.setTextColor(context.getResources().getColor(R.color.black));
+        }
         if(tvList.size() < titles.length){
             tvList.add(holder.tv_title);
         }
@@ -56,7 +56,14 @@ public class FormTitlesAdapter extends RecyclerView.Adapter<FormTitlesAdapter.Ti
 
     static class TitleViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         @ViewInject(R.id.item_form_title)
-        public TextView tv_title;
+        private TextView tv_title;
+
+        @ViewInject(R.id.direction_line_bottom)
+        private View direction_line_bottom;
+
+        @ViewInject(R.id.direction_line_right)
+        private View direction_line_right;
+
         private TitleClickListener listener;
 
         public TitleViewHolder(View itemView, TitleClickListener listener) {

@@ -8,12 +8,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pump.ia.R;
+import com.pump.ia.domain.sheetContent.FamilyMember;
+
+import org.xutils.x;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FamilyMemberFragment extends Fragment {
 
+    private List<FamilyMember> familyMemberList;
 
     public FamilyMemberFragment() {
         // Required empty public constructor
@@ -23,8 +30,14 @@ public class FamilyMemberFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_family_member, container, false);
+        View v =  inflater.inflate(R.layout.fragment_family_member, container, false);
+        x.view().inject(this, v);
+
+        return  v;
+    }
+
+    private void initData(){
+        familyMemberList = new ArrayList<>();
     }
 
 }

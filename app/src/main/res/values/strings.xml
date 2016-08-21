@@ -3,4 +3,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="more">...</string>
+    <string-array name="marry_status">
+        <item>未婚</item>
+        <item>已婚</item>
+    </string-array>
+
+    <string-array name="certificateType">
+        <item>身份证</item>
+        <item>护照</item>
+    </string-array>
+
 </resources>

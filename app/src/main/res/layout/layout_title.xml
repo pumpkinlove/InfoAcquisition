@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/blue_band_dark"
     android:layout_height="@dimen/title_height"
-    android:elevation="6dp">
+    android:elevation="5dp">
 
     <LinearLayout
         android:orientation="horizontal"

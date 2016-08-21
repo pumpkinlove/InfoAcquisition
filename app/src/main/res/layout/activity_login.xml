@@ -15,7 +15,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_weight="1.8"
+            android:layout_weight="1.6"
             android:layout_width="match_parent"
             android:layout_height="0dp"/>
 
@@ -55,7 +55,7 @@
 
         </LinearLayout>
         <View
-            android:layout_weight="2.7"
+            android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="0dp">
 
@@ -75,6 +75,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <EditText
+                    android:textColorHint="@color/blue_band_dark3"
+                    android:textColor="@color/white"
                     android:gravity="center|left"
                     android:hint="用户名"
                     android:background="@null"
@@ -114,8 +116,10 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <EditText
+                    android:textColor="@color/white"
                     android:gravity="center|left"
                     android:hint="密码"
+                    android:textColorHint="@color/blue_band_dark3"
                     android:background="@null"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -135,6 +139,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <TextView
+                    android:textColor="@color/white"
                     android:clickable="true"
                     android:id="@+id/tv_login"
                     android:textSize="20sp"
@@ -154,7 +159,7 @@
         </LinearLayout>
 
         <View
-            android:layout_weight="3.3"
+            android:layout_weight="4"
             android:layout_width="match_parent"
             android:layout_height="0dp">
 
