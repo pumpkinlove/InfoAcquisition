@@ -4,10 +4,225 @@
     android:layout_height="match_parent"
     tools:context="com.pump.ia.fragment.form.business.BusinessInfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:elevation="6dp"
+        android:layout_margin="3dp"
+        android:background="@color/white"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="商铺名称"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:background="@null"
+                android:hint="商铺名称"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="经营项目"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:background="@null"
+                android:hint="经营项目"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="经营年限"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:background="@null"
+                android:hint="经营年限"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="经营年收入"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:background="@null"
+                android:hint="经营年收入"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="经营地址"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:background="@null"
+                android:hint="经营地址"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="经营场所"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:background="@null"
+                android:hint="经营场所"
+                android:textColorHint="@color/gray_light"
+                android:gravity="center"
+                android:textColor="@color/dark"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

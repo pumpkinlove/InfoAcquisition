@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.pump.ia.R;
 import com.pump.ia.domain.sheetContent.FamilyMember;
 
+import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -33,12 +34,12 @@ public class FamilyMemberAdapter extends RecyclerView.Adapter<FamilyMemberAdapte
 
     @Override
     public FamilyMemberViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new FamilyMemberViewHolder(LayoutInflater.from(context).inflate(R.layout.item_form_title, parent, false), listener);
+        return new FamilyMemberViewHolder(LayoutInflater.from(context).inflate(R.layout.item_family_member, parent, false), listener);
     }
 
     @Override
     public void onBindViewHolder(FamilyMemberViewHolder holder, int position) {
-
+        
     }
 
     @Override
@@ -50,12 +51,14 @@ public class FamilyMemberAdapter extends RecyclerView.Adapter<FamilyMemberAdapte
     static class FamilyMemberViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private FamilyMemberClickListener listener;
+        @ViewInject(R.id.tv_add_family_member)
+        private TextView tv_add_family_member;
 
         public FamilyMemberViewHolder(View itemView, FamilyMemberClickListener listener) {
             super(itemView);
             x.view().inject(this, itemView);
             this.listener = listener;
-            itemView.setOnClickListener(this);
+            tv_add_family_member.setOnClickListener(this);
         }
 
         @Override

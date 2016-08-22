@@ -4,10 +4,563 @@
     android:layout_height="match_parent"
     tools:context="com.pump.ia.fragment.form.share.BankBusinessFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_margin="3dp"
+        android:elevation="6dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="我行"
+                    android:textColor="@color/blue_band_dark3"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="存款余额"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="贷款余额"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="理财余额"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="银行卡"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="电子银行"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="POS"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="其它"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_dark"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="他行"
+                    android:textColor="@color/blue_band_dark3"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="存款余额"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="贷款余额"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="理财余额"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="银行卡"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="电子银行"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="POS"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="51dp">
+
+                <TextView
+                    android:layout_weight="4"
+                    android:text="其它"
+                    android:textColor="@color/blue_band_dark2"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:background="@null"
+                    android:textColorHint="@color/gray_light"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

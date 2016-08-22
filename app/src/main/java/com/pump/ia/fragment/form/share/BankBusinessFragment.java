@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import com.pump.ia.R;
 
+import org.xutils.x;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -23,8 +25,9 @@ public class BankBusinessFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bank_business, container, false);
+        View v = inflater.inflate(R.layout.fragment_bank_business, container, false);
+        x.view().inject(this, v);
+        return v;
     }
 
 }
