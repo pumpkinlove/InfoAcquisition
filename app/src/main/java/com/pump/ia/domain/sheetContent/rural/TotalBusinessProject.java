@@ -26,4 +26,5 @@ public class TotalBusinessProject implements Serializable {
     public void setTotalIncome(String totalIncome) {
         this.totalIncome = totalIncome;
     }
+
 }

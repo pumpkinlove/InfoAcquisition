@@ -4,10 +4,116 @@
     android:layout_height="match_parent"
     tools:context="com.pump.ia.fragment.form.topublic.EnterpriseFinanceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_margin="3dp"
+        android:background="@color/white"
+        android:elevation="6dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:textSize="18sp"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="企业年收入" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:textSize="18sp"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="企业年支出" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:textSize="18sp"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="企业或有负债" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

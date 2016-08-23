@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="51dp">
+
+        <EditText
+            android:hint="金额"
+            android:textColorHint="@color/gray_light"
+            android:layout_weight="2"
+            android:textSize="18sp"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:hint="点击选择时间"
+            android:textColorHint="@color/gray_light"
+            android:layout_weight="2"
+            android:textSize="18sp"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:hint="点击选择时间"
+            android:textColorHint="@color/gray_light"
+            android:layout_weight="2"
+            android:textSize="18sp"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_del_bank_business"
+            android:clickable="true"
+            android:text=" — "
+            android:layout_weight="1"
+            android:textSize="40sp"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <View
+        android:background="@color/gray_light"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+</LinearLayout>

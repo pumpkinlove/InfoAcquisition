@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pump.ia.fragment.serve.CustomerServeFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/gray_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_title"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_test2"
+            android:background="@color/pink"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/hello_blank_fragment" />
+    </LinearLayout>
+
+
+</FrameLayout>

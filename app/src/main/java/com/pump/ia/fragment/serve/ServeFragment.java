@@ -86,6 +86,7 @@ public class ServeFragment extends Fragment {
     }
 
     private void initView(){
+        vp_serve.setOffscreenPageLimit(20);
         vp_serve.setAdapter(adapter);
         vp_serve.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tl_serve));
         tl_serve.setupWithViewPager(vp_serve);
@@ -96,7 +97,6 @@ public class ServeFragment extends Fragment {
                 tab.setText(titles[i]);
             }
         }
-
 
         tv_rightContent.setVisibility(View.GONE);
         tv_rightIcon.setVisibility(View.VISIBLE);

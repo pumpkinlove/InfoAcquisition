@@ -5,33 +5,98 @@
     tools:context="com.pump.ia.fragment.form.share.BankBusinessFragment">
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:layout_margin="3dp"
-        android:elevation="6dp"
+        android:orientation="vertical"
+        android:background="@null"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:layout_margin="3dp"
+            android:elevation="6dp"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_width="0dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <TextView
+                android:background="@color/blue_band_light"
+                android:text="存款"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="51dp">
+                android:layout_height="50dp" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:textColor="@color/blue_band_dark3"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="51dp" >
 
                 <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="金额" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="办理时间" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="到期时间" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/tv_add_bank_business_deposit"
+                    android:clickable="true"
+                    android:text=" + "
                     android:layout_weight="1"
-                    android:text="我行"
+                    android:textSize="40sp"
+                    android:background="?attr/selectableItemBackground"
                     android:textColor="@color/blue_band_dark3"
                     android:gravity="center"
-                    android:textSize="20sp"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
@@ -40,275 +105,104 @@
                 android:layout_width="match_parent"
                 android:layout_height="1px"/>
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_bank_business_deposit"
                 android:layout_width="match_parent"
-                android:layout_height="51dp">
+                android:layout_height="wrap_content">
 
+            </android.support.v7.widget.RecyclerView>
 
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="存款余额"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="贷款余额"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="理财余额"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="银行卡"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="电子银行"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="POS"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="其它"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
 
         </LinearLayout>
 
         <View
-            android:background="@color/gray_dark"
-            android:layout_width="1px"
-            android:layout_height="match_parent"/>
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
 
         <LinearLayout
+            android:layout_margin="3dp"
+            android:elevation="6dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <TextView
+                android:background="@color/blue_band_light"
+                android:text="贷款"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="51dp">
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:textColor="@color/blue_band_dark3"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="51dp" >
 
                 <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="金额" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="办理时间" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="到期时间" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/tv_add_bank_business_loan"
+                    android:clickable="true"
+                    android:text=" + "
                     android:layout_weight="1"
-                    android:text="他行"
+                    android:textSize="40sp"
+                    android:background="?attr/selectableItemBackground"
                     android:textColor="@color/blue_band_dark3"
                     android:gravity="center"
-                    android:textSize="20sp"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
@@ -317,247 +211,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="1px"/>
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_bank_business_loan"
                 android:layout_width="match_parent"
-                android:layout_height="51dp">
+                android:layout_height="wrap_content">
 
-
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="存款余额"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="贷款余额"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="理财余额"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="银行卡"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="电子银行"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="POS"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="match_parent"
-                android:layout_height="1px"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="51dp">
-
-                <TextView
-                    android:layout_weight="4"
-                    android:text="其它"
-                    android:textColor="@color/blue_band_dark2"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-                <View
-                    android:background="@color/gray_light"
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:singleLine="true" />
-
-            </LinearLayout>
+            </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
 

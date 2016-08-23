@@ -1,0 +1,513 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    tools:context="com.pump.ia.fragment.form.rural.RuralInfoFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@null"
+        android:elevation="6dp"
+        android:layout_margin="3dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:background="@color/white">
+
+            <TextView
+                android:text="所属行政村"
+                android:textColor="@color/dark"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:layout_weight="7"
+                android:background="@null"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+        <LinearLayout
+            android:elevation="6dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="51dp">
+            <TextView
+                android:gravity="center"
+                android:background="@color/blue_band_light"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="种植"
+                android:layout_width="match_parent"
+                android:layout_height="51dp" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:textColor="@color/blue_band_dark3"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="51dp" >
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="种类" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="规模" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="年收入" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:clickable="true"
+                    android:text=" + "
+                    android:layout_weight="1"
+                    android:textSize="40sp"
+                    android:background="?attr/selectableItemBackground"
+                    android:textColor="@color/blue_band_dark3"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_add_zhongzhi" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_zhongzhi">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:elevation="6dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="51dp">
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <TextView
+                android:gravity="center"
+                android:background="@color/blue_band_light"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="养殖"
+                android:layout_width="match_parent"
+                android:layout_height="51dp" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:textColor="@color/blue_band_dark3"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="51dp" >
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="种类" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="规模" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/dark"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="年收入" />
+
+                <View
+                    android:background="@color/gray_light"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:clickable="true"
+                    android:text=" + "
+                    android:layout_weight="1"
+                    android:textSize="40sp"
+                    android:background="?attr/selectableItemBackground"
+                    android:textColor="@color/blue_band_dark3"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_add_yangzhi" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_yangzhi">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="51dp">
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <TextView
+            android:gravity="center"
+            android:background="@color/blue_band_light"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="经商"
+            android:layout_width="match_parent"
+            android:layout_height="51dp" />
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/blue_band_dark3"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="51dp" >
+
+            <TextView
+                android:layout_weight="2"
+                android:textSize="16sp"
+                android:background="@null"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="种类" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_weight="2"
+                android:textSize="16sp"
+                android:background="@null"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="规模" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_weight="2"
+                android:textSize="16sp"
+                android:background="@null"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="年收入" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:clickable="true"
+                android:text=" + "
+                android:layout_weight="1"
+                android:textSize="40sp"
+                android:background="?attr/selectableItemBackground"
+                android:textColor="@color/blue_band_dark3"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_add_jingshang" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_jingshang">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="51dp">
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <TextView
+            android:gravity="center"
+            android:background="@color/blue_band_light"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="外出打工"
+            android:layout_width="match_parent"
+            android:layout_height="51dp" />
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/blue_band_dark3"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="51dp" >
+
+            <TextView
+                android:layout_weight="2"
+                android:textSize="16sp"
+                android:background="@null"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="外出地" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_weight="2"
+                android:textSize="16sp"
+                android:background="@null"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_weight="2"
+                android:textSize="16sp"
+                android:background="@null"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="年收入" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_add_dagong"
+                android:clickable="true"
+                android:text=" + "
+                android:layout_weight="1"
+                android:textSize="40sp"
+                android:background="?attr/selectableItemBackground"
+                android:textColor="@color/blue_band_dark3"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_dagong">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:elevation="6dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:text="收入合计"
+                android:textColor="@color/dark"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:layout_weight="7"
+                android:background="@null"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

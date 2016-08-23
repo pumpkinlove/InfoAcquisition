@@ -39,7 +39,7 @@ public class FamilyMemberAdapter extends RecyclerView.Adapter<FamilyMemberAdapte
 
     @Override
     public void onBindViewHolder(FamilyMemberViewHolder holder, int position) {
-        
+
     }
 
     @Override
@@ -51,14 +51,14 @@ public class FamilyMemberAdapter extends RecyclerView.Adapter<FamilyMemberAdapte
     static class FamilyMemberViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private FamilyMemberClickListener listener;
-        @ViewInject(R.id.tv_add_family_member)
-        private TextView tv_add_family_member;
+        @ViewInject(R.id.tv_del_family_member)
+        private TextView tv_del_family_member;
 
         public FamilyMemberViewHolder(View itemView, FamilyMemberClickListener listener) {
             super(itemView);
             x.view().inject(this, itemView);
             this.listener = listener;
-            tv_add_family_member.setOnClickListener(this);
+            tv_del_family_member.setOnClickListener(this);
         }
 
         @Override

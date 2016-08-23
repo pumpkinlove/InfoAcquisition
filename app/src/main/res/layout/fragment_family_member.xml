@@ -9,6 +9,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/tv_add_family_member"
+            android:gravity="center"
+            android:text="点击添加家庭成员"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/gray_dark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
         <android.support.v7.widget.RecyclerView
             android:layout_weight="1"
             android:orientation="vertical"
@@ -20,17 +36,6 @@
             android:saveEnabled="true">
 
         </android.support.v7.widget.RecyclerView>
-
-        <TextView
-            android:id="@+id/tv_add_family_member"
-            android:gravity="center"
-            android:text="点击添加家庭成员"
-            android:textSize="18sp"
-            android:clickable="true"
-            android:background="?attr/selectableItemBackground"
-            android:textColor="@color/gray_dark"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
 
     </LinearLayout>
 

@@ -92,7 +92,7 @@ public class BusinessFormActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        title_middle.setText("个体工商户");
+        title_middle.setText("城镇居民");
         title_left.setVisibility(View.VISIBLE);
         rv_business_form_titles.setHasFixedSize(true);
         rv_business_form_titles.setLayoutManager(new LinearLayoutManager(this));

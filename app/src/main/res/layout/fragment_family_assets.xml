@@ -319,10 +319,7 @@
                         android:layout_width="1px"
                         android:layout_height="match_parent"/>
                     <EditText
-                        android:background="@null"
-                        android:textColorHint="@color/gray_light"
-                        android:gravity="center"
-                        android:textColor="@color/dark"
+                        style="@style/form_edit_view"
                         android:layout_weight="5"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -353,10 +350,7 @@
                         android:layout_width="1px"
                         android:layout_height="match_parent"/>
                     <EditText
-                        android:background="@null"
-                        android:textColorHint="@color/gray_light"
-                        android:gravity="center"
-                        android:textColor="@color/dark"
+                        style="@style/form_edit_view"
                         android:layout_weight="5"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -387,10 +381,7 @@
                     android:layout_width="1px"
                     android:layout_height="match_parent"/>
                 <EditText
-                    android:background="@null"
-                    android:textColorHint="@color/gray_light"
-                    android:gravity="center"
-                    android:textColor="@color/dark"
+                    style="@style/form_edit_view"
                     android:layout_weight="5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

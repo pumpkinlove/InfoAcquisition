@@ -3,12 +3,17 @@ package com.pump.ia.fragment.serve;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.pump.ia.R;
 
+import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 /**
@@ -16,6 +21,8 @@ import org.xutils.x;
  */
 public class UrbanServeFragment extends Fragment {
 
+    @ViewInject(R.id.tv_test)
+    private TextView tv_test;
 
     public UrbanServeFragment() {
         // Required empty public constructor
@@ -29,9 +36,17 @@ public class UrbanServeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_urban_serve, container, false);
         x.view().inject(this, v);
 
-        
-
         return v;
+    }
+
+    @Event(value = R.id.tv_test)
+    private void gotest(View view){
+        Fragment newFragment = new CustomerServeFragment();
+        FragmentManager fm = getParentFragment().getFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.replace(R.id.fl_serve ,newFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 }

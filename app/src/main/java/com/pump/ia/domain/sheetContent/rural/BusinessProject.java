@@ -13,6 +13,13 @@ public class BusinessProject implements Serializable {
     private String scale;               //规模
     private String annualIncome;
 
+    public BusinessProject() {
+    }
+
+    public BusinessProject(String type) {
+        this.type = type;
+    }
+
     public String getType() {
         return type;
     }
