@@ -4,6 +4,7 @@ package com.pump.ia.fragment.serve;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -27,7 +28,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ServeFragment extends Fragment {
+public class ServeFragment extends Fragment implements UrbanServeFragment.testRecall {
 
     private MyFragmentAdapter adapter;
     private List<Fragment> fragmentList;
@@ -101,11 +102,19 @@ public class ServeFragment extends Fragment {
         tv_rightContent.setVisibility(View.GONE);
         tv_rightIcon.setVisibility(View.VISIBLE);
         tv_middleContent.setText("客户服务");
+
     }
 
     @Event(value = {R.id.title_right_icon}, type = View.OnClickListener.class)
-    private void toSearch(View view){
+    private void toSearch(View view) {
         startActivity(new Intent(getActivity(), SearchActivity.class));
     }
 
+    @Override
+    public void recall(View v) {
+        Snackbar.make(v,"--------"+urbanServeFragment.tv_test.getText(),Snackbar.LENGTH_LONG).show();
+
+        getFragmentManager().beginTransaction().add(R.id.fl_serve, new CustomerServeFragment()).commit();
+
+    }
 }

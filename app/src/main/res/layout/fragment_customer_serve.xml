@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     tools:context="com.pump.ia.fragment.serve.CustomerServeFragment">
 
     <LinearLayout
@@ -12,14 +13,244 @@
 
         <include layout="@layout/layout_title"/>
 
-        <TextView
-            android:layout_weight="1"
-            android:id="@+id/tv_test2"
-            android:background="@color/pink"
+        <LinearLayout
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:background="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:hint="客户姓名"
+                    android:textColor="@color/blue_band_dark"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/blue_band_dark"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent" />
+
+
+                <TextView
+                    android:elevation="4dp"
+                    android:clickable="true"
+                    android:background="@drawable/gold_button_selector"
+                    android:text="查看详情"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:hint="性别"
+                    android:textColor="@color/blue_band_dark"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/blue_band_dark"
+                    android:gravity="center"
+                    android:hint="婚姻状况"
+                    android:layout_weight="2.5"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/blue_band_dark"
+                    android:gravity="center"
+                    android:hint="出生日期"
+                    android:layout_weight="5"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:hint="证件类型"
+                    android:textColor="@color/blue_band_dark"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:hint="证件号码"
+                    android:textColor="@color/blue_band_dark"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/blue_band_dark"
+                    android:gravity="center"
+                    android:hint="地址"
+                    android:layout_weight="5"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray_dark"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:hint="关注数量"
+                    android:textColor="@color/blue_band_dark"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@android:drawable/sym_action_chat"
+                    android:drawablePadding="-10dp"
+                    android:paddingStart="20dp" />
+
+                <TextView
+                    android:hint="服务次数"
+                    android:textColor="@color/blue_band_dark"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:paddingStart="20dp"
+                    android:drawableStart="@android:drawable/sym_action_email"
+                    android:drawablePadding="-10dp" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/blue_band_dark"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:elevation="4dp"
+                    android:clickable="true"
+                    android:background="@drawable/green_button_selector"
+                    android:text="关注"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:elevation="4dp"
+                    android:clickable="true"
+                    android:background="@drawable/green_button_selector"
+                    android:text="已关注"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_customer_serve_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
     </LinearLayout>
 
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        fab:fab_addButtonColorNormal="@color/gold"
+        fab:fab_addButtonColorPressed="@color/gold_dark"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="right|bottom">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_title="提交表单"
+            fab:fab_colorPressed="@color/blue_band_light"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_title="清空表单"
+            fab:fab_colorPressed="@color/red"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
 </FrameLayout>

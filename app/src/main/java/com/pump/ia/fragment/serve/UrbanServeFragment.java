@@ -2,6 +2,7 @@ package com.pump.ia.fragment.serve;
 
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -22,7 +23,7 @@ import org.xutils.x;
 public class UrbanServeFragment extends Fragment {
 
     @ViewInject(R.id.tv_test)
-    private TextView tv_test;
+    public TextView tv_test;
 
     public UrbanServeFragment() {
         // Required empty public constructor
@@ -41,12 +42,12 @@ public class UrbanServeFragment extends Fragment {
 
     @Event(value = R.id.tv_test)
     private void gotest(View view){
-        Fragment newFragment = new CustomerServeFragment();
-        FragmentManager fm = getParentFragment().getFragmentManager();
-        FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(R.id.fl_serve ,newFragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+        testRecall t = (testRecall) getParentFragment();
+        t.recall(view);
+    }
+
+    public interface testRecall{
+        public void recall(View v);
     }
 
 }

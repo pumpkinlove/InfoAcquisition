@@ -13,6 +13,7 @@
 
     <color name="blue_band_dark">#12283d</color>
     <color name="blue_band_light">#86ecef</color>
+    <color name="blue_band_light2">#61b9bc</color>
     <color name="blue_band_dark2">#4d5d6d</color>
     <color name="blue_band_dark3">#9688939e</color>
     <color name="red_dark">#871c21</color>
@@ -21,4 +22,6 @@
     <color name="gray_light">#e6e6e6</color>
     <color name="dark">#333</color>
     <color name="pink">#ffb0e8</color>
+    <color name="green">#69af69</color>
+    <color name="green_dark">#217821</color>
 </resources>

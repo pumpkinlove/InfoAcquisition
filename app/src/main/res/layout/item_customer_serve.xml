@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:layout_marginTop="12dp"
+    android:elevation="2dp">
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:hint="姓名"
+            android:textSize="18sp"
+            android:paddingLeft="20dp"
+            android:textColor="@color/blue_band_dark2"
+            android:gravity="start|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/tv_serve_name" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="20dp"
+            android:hint="服务内容"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_serve_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="start|center_vertical"
+                android:hint="评论数量"
+                android:paddingLeft="20dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/tv_serve_commentNum" />
+
+            <TextView
+                android:gravity="start|center_vertical"
+                android:hint="服务类型"
+                android:paddingLeft="20dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/tv_serve_type" />
+
+            <TextView
+                android:gravity="start|center_vertical"
+                android:hint="服务时间"
+                android:paddingLeft="20dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/tv_serve_time" />
+
+            <TextView
+                android:gravity="start|center_vertical"
+                android:hint="服务地点"
+                android:paddingLeft="20dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/tv_serve_address" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
