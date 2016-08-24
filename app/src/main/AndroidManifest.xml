@@ -53,9 +53,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="dc9200eda023debd90ff8d248d342f2a" >//开发者申请的key
+            android:value="ea0491461a7d74cc3ab3c62f59ca28f1" >//开发者申请的key-高德地图
         </meta-data>
 
         <service android:name="com.amap.api.location.APSService"/>
