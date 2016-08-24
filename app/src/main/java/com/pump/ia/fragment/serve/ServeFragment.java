@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -112,9 +113,9 @@ public class ServeFragment extends Fragment implements UrbanServeFragment.testRe
 
     @Override
     public void recall(View v) {
-        Snackbar.make(v,"--------"+urbanServeFragment.tv_test.getText(),Snackbar.LENGTH_LONG).show();
-
-        getFragmentManager().beginTransaction().add(R.id.fl_serve, new CustomerServeFragment()).commit();
-
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.addToBackStack("fragment_serve");
+        ft.replace(R.id.fl_serve, new CustomerServeFragment());
+        ft.commit();
     }
 }

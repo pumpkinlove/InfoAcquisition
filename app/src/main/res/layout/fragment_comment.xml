@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="fragment_comment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pump.ia.fragment.serve.CommentFragment">
+
+    <LinearLayout
+        android:background="@color/gray_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_title"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/rv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fadingEdge="vertical"
+            android:fadeScrollbars="false"
+            android:saveEnabled="true">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:hint="添加评论"
+                android:layout_weight="9"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/black"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:textColorHighlight="@color/blue_band_dark"
+                android:cursorVisible="true"
+                android:id="@+id/et_new_comment" />
+            <ImageView
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_send"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/iv_add_comment" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

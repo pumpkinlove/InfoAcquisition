@@ -5,6 +5,8 @@ import android.util.Log;
 
 import org.xutils.x;
 
+import static com.amap.api.location.AMapLocationClient.setApiKey;
+
 /**
  * Created by xu.nan on 2016/8/17.
  */

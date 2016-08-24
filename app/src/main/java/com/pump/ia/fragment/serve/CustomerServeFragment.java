@@ -3,8 +3,11 @@ package com.pump.ia.fragment.serve;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +39,9 @@ public class CustomerServeFragment extends Fragment {
     private ServeAdapter serveAdapter;
     @ViewInject(R.id.rv_customer_serve_list)
     private RecyclerView rv_customer_serve_list;
+
+    private FragmentManager fm;
+    private FragmentTransaction ft;
 
     public CustomerServeFragment() {
         // Required empty public constructor
@@ -96,6 +102,7 @@ public class CustomerServeFragment extends Fragment {
 
 
         serveAdapter = new ServeAdapter(serveList, getContext());
+        fm = getFragmentManager();
 
 
     }
@@ -103,12 +110,26 @@ public class CustomerServeFragment extends Fragment {
     private void initView(){
         rv_customer_serve_list.setLayoutManager(new LinearLayoutManager(getContext()));
         rv_customer_serve_list.setAdapter(serveAdapter);
+        serveAdapter.setOnItemClickListener(new ServeAdapter.ServeListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Log.e("------","itemclick");
+                ft = fm.beginTransaction();
+                ft.addToBackStack("fragment_customer_serve");
+                CommentFragment commentFragment = new CommentFragment();
+                ft.replace(R.id.fl_customer_serve, commentFragment);
+                ft.commit();
+            }
+        });
         title_left.setVisibility(View.VISIBLE);
     }
 
     @Event(R.id.title_left)
     private void goBack(View view){
-
+        ft = fm.beginTransaction();
+        ft.addToBackStack(null);
+        ft.remove(this);
+        ft.commit();
     }
 
 }

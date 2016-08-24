@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:elevation="2dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_weight="2"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="20dp"
+            android:hint="评论人姓名"
+            android:textColor="@color/blue_band_dark2"
+            android:textSize="18sp"
+            android:id="@+id/comment_name"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:visibility="invisible"
+            android:text=" 回复: "
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="20dp"
+            android:textColor="@color/blue_band_dark"
+            android:textSize="18sp"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_huifu" />
+        <TextView
+            android:id="@+id/comment_answer_name"
+            android:visibility="invisible"
+            android:layout_weight="2"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="20dp"
+            android:hint="被回复人姓名"
+            android:textColor="@color/blue_band_dark2"
+            android:textSize="18sp"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_weight="3"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="20dp"
+            android:textColor="@color/blue_band_dark2"
+            android:textSize="18sp"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:hint="评论序号"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:textColor="@color/gray_light"
+            android:textSize="18sp"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:id="@+id/comment_id" />
+    </LinearLayout>
+    <TextView
+        android:gravity="start|center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:hint="评论内容"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:id="@+id/comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_weight="5"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="20dp"
+            android:hint="评论时间"
+            android:id="@+id/comment_time"
+            android:textColor="@color/gray_dark"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_weight="3"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="20dp"
+            android:textColor="@color/blue_band_dark2"
+            android:textSize="18sp"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_answer"
+            android:text="回复"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:textColor="@color/blue_band_dark2"
+            android:textSize="18sp"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    
+</LinearLayout>

@@ -73,7 +73,7 @@ public class ServeAdapter extends  RecyclerView.Adapter<ServeAdapter.ServeViewHo
             super(itemView);
             x.view().inject(this, itemView);
             this.listener = listener;
-            itemView.setOnClickListener(this);
+            tv_serve_commentNum.setOnClickListener(this);
         }
 
         @Override
