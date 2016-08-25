@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:background="@drawable/white_bg_blue_ripple"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <TextView
+        android:textColor="@color/dark_blue"
+        android:text="客户姓名"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:drawableLeft="@android:drawable/ic_menu_recent_history"
+        android:id="@+id/tv_remind_name" />
+
+    <TextView
+        android:textColor="@color/dark_blue"
+        android:text="客户类型"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_remind_type" />
+
+    <TextView
+        android:textColor="@color/dark_blue"
+        android:text="存款金额"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_remind_money" />
+
+    <TextView
+        android:textColor="@color/dark_red"
+        android:gravity="center"
+        android:text="1992-5-26"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_remind_time" />
+
+
+</LinearLayout>

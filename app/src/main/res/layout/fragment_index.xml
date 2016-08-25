@@ -12,36 +12,132 @@
         <include layout="@layout/layout_title"/>
 
         <com.pump.ia.view.SlideShowView
-            android:layout_weight="1.5"
+            android:layout_weight="2"
             android:id="@+id/slideshowView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="0dp"/>
 
         <View
-            android:background="@color/blue_band_dark3"
+            android:background="@color/gray_light"
             android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+            android:layout_height="1px"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="@color/blue_band_light"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="提示内容"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_weight="3"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_notification"
             android:clickable="true"
             android:background="@color/white"
-            android:layout_weight="1"
+            android:layout_weight="4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp">
 
         </android.support.v7.widget.RecyclerView>
-        
+
         <View
-            android:background="@color/blue_band_dark3"
+            android:background="@color/gray_light"
             android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+            android:layout_height="1px"/>
+
+        <TextView
+            android:background="@color/blue_band_light"
+            android:textColor="@color/white"
+            android:text="存款本月即将到期客户"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="客户名称"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="kehuleixing"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="存款金额（万元）"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="到期时间"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_remind"
             android:clickable="true"
             android:background="@color/white"
-            android:layout_weight="1"
+            android:layout_weight="5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp">
 
 
         </android.support.v7.widget.RecyclerView>
