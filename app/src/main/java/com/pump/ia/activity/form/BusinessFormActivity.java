@@ -72,7 +72,6 @@ public class BusinessFormActivity extends BaseActivity {
     @Override
     protected void initData() {
 
-
         titlesAdapter = new FormTitlesAdapter(TITLES, this);
 
         contentList = new ArrayList<>();
@@ -104,7 +103,6 @@ public class BusinessFormActivity extends BaseActivity {
                 vvp_business_form_content.setCurrentItem(position);
             }
         });
-
 
         vvp_business_form_content.setOffscreenPageLimit(10);
         vvp_business_form_content.setAdapter(contentAdapter);

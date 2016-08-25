@@ -64,7 +64,7 @@ public class LoginActivity extends BaseActivity implements AMapLocationListener 
 
     @Event(value={R.id.tv_login},type=View.OnClickListener.class)
     private void login(View view) {
-
+//        getSHA1(view);
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
         //声明mLocationOption对象
 //        AMapLocationClientOption mLocationOption = null;
@@ -87,7 +87,6 @@ public class LoginActivity extends BaseActivity implements AMapLocationListener 
 //        // 在单次定位情况下，定位无论成功与否，都无需调用stopLocation()方法移除请求，定位sdk内部会移除
 //        // 启动定位
 //        mlocationClient.startLocation();
-
 
 
     }
