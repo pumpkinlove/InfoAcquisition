@@ -7,25 +7,76 @@
     <!-- TODO: Update blank fragment layout -->
     <include layout="@layout/layout_title"/>
 
-    <Button
-        android:text="城镇居民"
-        android:id="@+id/urbanForm"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
-    <Button
-        android:text="农村居民"
-        android:id="@+id/ruralForm"
+        android:layout_height="150dp">
+        <TextView
+            android:background="@drawable/white_bg_blue_ripple"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="城镇居民"
+            android:id="@+id/urbanForm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:background="@drawable/white_bg_blue_ripple"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="农村居民"
+            android:id="@+id/ruralForm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:background="@drawable/white_bg_blue_ripple"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="个体户"
+            android:id="@+id/businessForm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:background="@drawable/white_bg_blue_ripple"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="对公"
+            android:id="@+id/toPublicForm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/gray_light"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
-    <Button
-        android:text="个体户"
-        android:id="@+id/businessForm"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
-    <Button
-        android:text="对公"
-        android:id="@+id/toPublicForm"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="1px"/>
+
+
 
 </LinearLayout>

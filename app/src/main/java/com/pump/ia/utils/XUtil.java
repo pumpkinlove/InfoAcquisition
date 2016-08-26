@@ -30,7 +30,7 @@ public class XUtil {
      * @param <T>
      */
     public static <T> Callback.Cancelable Post(String url, Map<String,Object> map, Callback.CommonCallback<T> callback){
-        RequestParams params=new RequestParams(url);
+        RequestParams params = new RequestParams(url);
         if(null!=map){
             for(Map.Entry<String, Object> entry : map.entrySet()){
                 params.addParameter(entry.getKey(), entry.getValue());

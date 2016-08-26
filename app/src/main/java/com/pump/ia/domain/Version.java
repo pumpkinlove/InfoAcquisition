@@ -13,6 +13,14 @@ public class Version {
     private String descript;
     private String path;
 
+    public Version() {
+    }
+
+    public Version(String versionName, int versionCode) {
+        this.versionName = versionName;
+        this.versionCode = versionCode;
+    }
+
     public int getId() {
         return id;
     }
