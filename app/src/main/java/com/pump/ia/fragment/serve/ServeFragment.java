@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ServeFragment extends Fragment implements UrbanServeFragment.testRecall {
+public class ServeFragment extends Fragment {
 
     private MyFragmentAdapter adapter;
     private List<Fragment> fragmentList;
@@ -111,11 +111,4 @@ public class ServeFragment extends Fragment implements UrbanServeFragment.testRe
         startActivity(new Intent(getActivity(), SearchActivity.class));
     }
 
-    @Override
-    public void recall(View v) {
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.addToBackStack("fragment_serve");
-        ft.replace(R.id.fl_serve, new CustomerServeFragment());
-        ft.commit();
-    }
 }

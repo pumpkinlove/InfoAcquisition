@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.baoyz.widget.PullRefreshLayout;
 import com.pump.ia.R;
 import com.pump.ia.adapter.NotificationAdapter;
 import com.pump.ia.adapter.RemindAdapter;
@@ -21,6 +22,7 @@ import com.pump.ia.domain.Notification;
 import com.pump.ia.domain.Remind;
 import com.pump.ia.utils.DateUtil;
 
+import org.xutils.common.task.AbsTask;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -41,6 +43,12 @@ public class IndexFragment extends Fragment {
 
     @ViewInject(R.id.rv_remind)
     private RecyclerView rv_remind;
+
+    @ViewInject(R.id.pr_notification)
+    private PullRefreshLayout pr_notification;
+
+    @ViewInject(R.id.pr_remind)
+    private PullRefreshLayout pr_remind;
 
     private NotificationAdapter notificationAdapter;
     private RemindAdapter remindAdapter;
@@ -108,7 +116,55 @@ public class IndexFragment extends Fragment {
 
         rv_notification.setLayoutManager(new LinearLayoutManager(getContext()));
         rv_notification.setAdapter(notificationAdapter);
+        pr_notification.setOnRefreshListener(new PullRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                x.task().start(new AbsTask<String>() {
+                    @Override
+                    protected String doBackground() throws Throwable {
+                        Thread.sleep(3000);
+                        return "ok";
+                    }
+
+                    @Override
+                    protected void onSuccess(String result) {
+                        pr_notification.setRefreshing(false);
+                    }
+
+                    @Override
+                    protected void onError(Throwable ex, boolean isCallbackError) {
+
+                    }
+                });
+            }
+        });
+
         rv_remind.setLayoutManager(new LinearLayoutManager(getContext()));
         rv_remind.setAdapter(remindAdapter);
+        pr_remind.setOnRefreshListener(new PullRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                x.task().start(new AbsTask<String>() {
+                    @Override
+                    protected String doBackground() throws Throwable {
+                        Thread.sleep(3000);
+                        return "ok";
+                    }
+
+                    @Override
+                    protected void onSuccess(String result) {
+                        pr_remind.setRefreshing(false);
+                    }
+
+                    @Override
+                    protected void onError(Throwable ex, boolean isCallbackError) {
+
+                    }
+                });
+            }
+        });
+
+
+
     }
 }

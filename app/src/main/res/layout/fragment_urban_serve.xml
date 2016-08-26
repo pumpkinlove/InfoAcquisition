@@ -4,12 +4,20 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/tv_test"
-        android:gravity="center"
-        android:text="iiiiii"
-        android:clickable="true"
+    <com.baoyz.widget.PullRefreshLayout
+        android:id="@+id/pr_urban"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_urban"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        </android.support.v7.widget.RecyclerView>
+
+    </com.baoyz.widget.PullRefreshLayout>
 
 </FrameLayout>

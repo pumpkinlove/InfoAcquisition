@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.pump.ia.R;
@@ -32,6 +34,15 @@ public class JoshuaDialog extends DialogFragment {
     @ViewInject(R.id.tv_dialog_content)
     private TextView tv_content;
 
+    @ViewInject(R.id.ll_dialog_middle)
+    private LinearLayout ll_middle;
+
+    @ViewInject(R.id.ll_dialog_bottom)
+    private LinearLayout ll_bottom;
+
+    @ViewInject(R.id.iv_dialog)
+    private ImageView iv_dialog;
+
     private View.OnClickListener confirmListener;
     private View.OnClickListener cancelListener;
 
@@ -39,6 +50,7 @@ public class JoshuaDialog extends DialogFragment {
     private String content;
     private String confirmMessage;
     private String cancelMessage;
+    private boolean errorFlag = false;
 
     @Override
     public void onStart() {
@@ -48,7 +60,7 @@ public class JoshuaDialog extends DialogFragment {
         if (dialog != null) {
             DisplayMetrics dm = new DisplayMetrics();
             getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
-            dialog.getWindow().setLayout((int) (dm.widthPixels * 0.77), ViewGroup.LayoutParams.WRAP_CONTENT);
+            dialog.getWindow().setLayout((int) (dm.widthPixels * 0.8), ViewGroup.LayoutParams.WRAP_CONTENT);
         }
     }
 
@@ -77,6 +89,13 @@ public class JoshuaDialog extends DialogFragment {
     }
 
     private void initView(){
+
+        if(errorFlag){
+            tv_title.setVisibility(View.GONE);
+            ll_bottom.setVisibility(View.GONE);
+            iv_dialog.setVisibility(View.VISIBLE);
+        }
+
         if(title != null){
             tv_title.setText(title);
         }else{
@@ -103,6 +122,10 @@ public class JoshuaDialog extends DialogFragment {
     public void onDestroy() {
         Log.e("------------","onDestroy");
         super.onDestroy();
+    }
+
+    public void setErrorFlag(boolean errorFlag){
+        this.errorFlag = errorFlag;
     }
 
     public String getCancelMessage() {
@@ -151,5 +174,61 @@ public class JoshuaDialog extends DialogFragment {
 
     public void setConfirmListener(View.OnClickListener confirmListener) {
         this.confirmListener = confirmListener;
+    }
+
+    public TextView getTv_confirm() {
+        return tv_confirm;
+    }
+
+    public void setTv_confirm(TextView tv_confirm) {
+        this.tv_confirm = tv_confirm;
+    }
+
+    public TextView getTv_cancel() {
+        return tv_cancel;
+    }
+
+    public void setTv_cancel(TextView tv_cancel) {
+        this.tv_cancel = tv_cancel;
+    }
+
+    public TextView getTv_title() {
+        return tv_title;
+    }
+
+    public void setTv_title(TextView tv_title) {
+        this.tv_title = tv_title;
+    }
+
+    public TextView getTv_content() {
+        return tv_content;
+    }
+
+    public void setTv_content(TextView tv_content) {
+        this.tv_content = tv_content;
+    }
+
+    public LinearLayout getLl_middle() {
+        return ll_middle;
+    }
+
+    public void setLl_middle(LinearLayout ll_middle) {
+        this.ll_middle = ll_middle;
+    }
+
+    public LinearLayout getLl_bottom() {
+        return ll_bottom;
+    }
+
+    public void setLl_bottom(LinearLayout ll_bottom) {
+        this.ll_bottom = ll_bottom;
+    }
+
+    public ImageView getIv_dialog() {
+        return iv_dialog;
+    }
+
+    public void setIv_dialog(ImageView iv_dialog) {
+        this.iv_dialog = iv_dialog;
     }
 }

@@ -23,7 +23,7 @@
         android:layout_height="match_parent"
         android:elevation="6dp"
         android:background="@color/blue_band_dark"
-        app:tabBackground="?android:attr/selectableItemBackgroundBorderless"
+        app:tabBackground="?android:attr/selectableItemBackground"
         app:tabIndicatorColor="@color/blue_band_light"
         app:tabIndicatorHeight="1dp"
         app:tabSelectedTextColor="@color/white"

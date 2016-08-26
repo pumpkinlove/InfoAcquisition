@@ -1,21 +1,26 @@
 package com.pump.ia.fragment.home;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.pump.ia.R;
 import com.pump.ia.activity.home.ConfigActivity;
 import com.pump.ia.domain.Version;
+import com.pump.ia.utils.CommonUtil;
 import com.pump.ia.utils.XUtil;
 import com.pump.ia.view.JoshuaDialog;
 import com.pump.ia.view.JoshuaUpdateDialog;
@@ -35,6 +40,7 @@ public class HomeFragment extends Fragment {
 
     private JoshuaDialog logoutDialog;
     private JoshuaUpdateDialog updateDialog;
+    private ProgressDialog pd_check_version;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -57,6 +63,9 @@ public class HomeFragment extends Fragment {
     private void initData() {
         logoutDialog = new JoshuaDialog();
         updateDialog = new JoshuaUpdateDialog();
+        pd_check_version = new ProgressDialog(getContext());
+        pd_check_version.setMessage("正在检查更新...");
+        pd_check_version.setCanceledOnTouchOutside(false);
     }
 
     private void initView() {
@@ -91,17 +100,18 @@ public class HomeFragment extends Fragment {
     @Event(value = R.id.ll_update)
     private void checkVersion(View view){
         Log.e("---------","checkVersion");
+
+        pd_check_version.show();
         String urlDemo = "http://192.168.5.123:8080/CIIPS_A/version/lastVersion.action";
         XUtil.Post(urlDemo, null, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Log.e("---------","onSuccess");
+                pd_check_version.dismiss();
                 Gson g = new Gson();
                 Version lastVersion = g.fromJson(result, Version.class);
                 try {
-                    PackageManager manager = getActivity().getPackageManager();
-                    PackageInfo info = manager.getPackageInfo(getActivity().getPackageName(), 0);
-                    Version curVersion = new Version(info.versionName, info.versionCode);
+                    Version curVersion = CommonUtil.getCurVersion(getContext());
                     if(lastVersion.getVersionCode() > curVersion.getVersionCode() ){
                         updateDialog.setLastVersion(lastVersion);
                         updateDialog.show(getActivity().getFragmentManager(),"update_dialog");
@@ -114,11 +124,14 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
+                pd_check_version.dismiss();
+                CommonUtil.MyAlert(" >_< 网络开小差啦~", getActivity().getFragmentManager(), "my_alert");
                 Log.e("---------","onError"+ex.getMessage());
             }
 
             @Override
             public void onCancelled(CancelledException cex) {
+                pd_check_version.dismiss();
                 Log.e("---------","onCancelled");
             }
 

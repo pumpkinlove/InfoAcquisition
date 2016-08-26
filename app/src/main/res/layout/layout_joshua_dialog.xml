@@ -19,10 +19,21 @@
         android:elevation="6dp"/>
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/ll_dialog_middle"
+        android:orientation="horizontal"
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <ImageView
+            android:visibility="gone"
+            android:padding="15dp"
+            android:id="@+id/iv_dialog"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/sorry" />
+
         <TextView
             android:id="@+id/tv_dialog_content"
             android:textSize="16sp"
@@ -38,14 +49,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
+        android:id="@+id/ll_dialog_bottom"
         android:background="@color/white"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -55,6 +59,7 @@
             android:background="@color/white"
             android:layout_width="0px"
             android:layout_height="match_parent"/>
+
         <TextView
             android:clickable="true"
             android:textColor="@color/dark"

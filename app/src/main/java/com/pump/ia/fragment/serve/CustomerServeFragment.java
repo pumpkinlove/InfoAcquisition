@@ -13,10 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.baoyz.widget.PullRefreshLayout;
 import com.pump.ia.R;
 import com.pump.ia.adapter.ServeAdapter;
+import com.pump.ia.domain.SimpleCustomer;
 import com.pump.ia.domain.serve.Serve;
 
+import org.xutils.common.task.AbsTask;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -37,11 +40,17 @@ public class CustomerServeFragment extends Fragment {
 
     private List<Serve> serveList;
     private ServeAdapter serveAdapter;
+
+    @ViewInject(R.id.pr_customer_serve_list)
+    private PullRefreshLayout pr_customer_serve_list;
+
     @ViewInject(R.id.rv_customer_serve_list)
     private RecyclerView rv_customer_serve_list;
 
     private FragmentManager fm;
     private FragmentTransaction ft;
+
+    private SimpleCustomer customer;
 
     public CustomerServeFragment() {
         // Required empty public constructor
@@ -62,6 +71,9 @@ public class CustomerServeFragment extends Fragment {
     }
 
     private void initData(){
+        customer = (SimpleCustomer) getArguments().get("customer");
+
+
         serveList = new ArrayList<>();
         Serve s1 = new Serve();
         s1.setName("徐一楠");
@@ -108,6 +120,7 @@ public class CustomerServeFragment extends Fragment {
     }
 
     private void initView(){
+
         rv_customer_serve_list.setLayoutManager(new LinearLayoutManager(getContext()));
         rv_customer_serve_list.setAdapter(serveAdapter);
         serveAdapter.setOnItemClickListener(new ServeAdapter.ServeListener() {
@@ -121,7 +134,34 @@ public class CustomerServeFragment extends Fragment {
                 ft.commit();
             }
         });
+
+        pr_customer_serve_list.setOnRefreshListener(new PullRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                x.task().start(new AbsTask<String>() {
+                    @Override
+                    protected String doBackground() throws Throwable {
+                        Thread.sleep(3000);
+                        return "ok";
+                    }
+
+                    @Override
+                    protected void onSuccess(String result) {
+                        pr_customer_serve_list.setRefreshing(false);
+                    }
+
+                    @Override
+                    protected void onError(Throwable ex, boolean isCallbackError) {
+
+                    }
+                });
+            }
+        });
+
+
         title_left.setVisibility(View.VISIBLE);
+
+
     }
 
     @Event(R.id.title_left)

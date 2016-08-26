@@ -13,10 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include layout="@layout/layout_title"/>
-
         <LinearLayout
-            android:elevation="6dp"
+            android:elevation="3dp"
             android:orientation="vertical"
             android:background="@color/white"
             android:layout_width="match_parent"
@@ -34,7 +32,8 @@
                     android:gravity="center"
                     android:layout_weight="5"
                     android:layout_width="0dp"
-                    android:layout_height="50dp" />
+                    android:layout_height="50dp"
+                    android:id="@+id/tv_name" />
 
                 <TextView
                     android:textSize="18sp"
@@ -74,7 +73,8 @@
                     android:gravity="center"
                     android:layout_weight="2.5"
                     android:layout_width="0dp"
-                    android:layout_height="50dp" />
+                    android:layout_height="50dp"
+                    android:id="@+id/tv_gender" />
 
                 <TextView
                     android:textSize="18sp"
@@ -83,7 +83,8 @@
                     android:hint="婚姻状况"
                     android:layout_weight="2.5"
                     android:layout_width="0px"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_marry" />
 
                 <TextView
                     android:textSize="18sp"
@@ -92,7 +93,8 @@
                     android:hint="出生日期"
                     android:layout_weight="5"
                     android:layout_width="0px"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_birthday" />
 
             </LinearLayout>
 
@@ -108,7 +110,8 @@
                     android:gravity="center"
                     android:layout_weight="2.5"
                     android:layout_width="0dp"
-                    android:layout_height="50dp" />
+                    android:layout_height="50dp"
+                    android:id="@+id/tv_certificate_type" />
 
                 <TextView
                     android:hint="证件号码"
@@ -117,7 +120,8 @@
                     android:gravity="center"
                     android:layout_weight="2.5"
                     android:layout_width="0dp"
-                    android:layout_height="50dp" />
+                    android:layout_height="50dp"
+                    android:id="@+id/tv_certificate" />
 
                 <TextView
                     android:textSize="18sp"
@@ -126,7 +130,8 @@
                     android:hint="地址"
                     android:layout_weight="5"
                     android:layout_width="0px"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_address" />
 
             </LinearLayout>
 
@@ -148,7 +153,7 @@
                     android:layout_weight="2.5"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-                    android:drawableLeft="@android:drawable/sym_action_chat"
+                    android:drawableLeft="@drawable/design_ic_visibility"
                     android:drawablePadding="-10dp"
                     android:paddingStart="20dp" />
 
@@ -161,7 +166,7 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:paddingStart="20dp"
-                    android:drawableStart="@android:drawable/sym_action_email"
+                    android:drawableStart="@android:drawable/ic_menu_myplaces"
                     android:drawablePadding="-10dp" />
 
                 <TextView
@@ -207,7 +212,8 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <com.baoyz.widget.PullRefreshLayout
+            android:id="@+id/pr_customer_serve_list"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp">
@@ -219,7 +225,7 @@
 
             </android.support.v7.widget.RecyclerView>
 
-        </LinearLayout>
+        </com.baoyz.widget.PullRefreshLayout>
 
     </LinearLayout>
 

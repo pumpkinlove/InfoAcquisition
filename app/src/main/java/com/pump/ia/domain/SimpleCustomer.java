@@ -1,9 +1,11 @@
 package com.pump.ia.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by xu.nan on 2016/8/17.
  */
-public class SimpleCustomer {
+public class SimpleCustomer implements Serializable{
 
     private String name;
     private String type;
