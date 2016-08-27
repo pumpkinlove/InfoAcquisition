@@ -99,7 +99,7 @@ public class UrbanFormActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        title_middle.setText("对公");
+        title_middle.setText("城镇居民");
         title_left.setVisibility(View.VISIBLE);
         rv_urban_form_titles.setHasFixedSize(true);
         rv_urban_form_titles.setLayoutManager(new LinearLayoutManager(this));
@@ -143,13 +143,4 @@ public class UrbanFormActivity extends BaseActivity {
         finish();
     }
 
-    @Event(value = R.id.fab_submit_form_urban)
-    private void urban_form_submit(View view){
-        Snackbar.make(view, "--submit--", Snackbar.LENGTH_LONG).show();
-    }
-
-    @Event(value = R.id.fab_clear_form_urban)
-    private void fab_clear_form_urban(View view){
-        Snackbar.make(view, "--clear=-", Snackbar.LENGTH_LONG).show();
-    }
 }

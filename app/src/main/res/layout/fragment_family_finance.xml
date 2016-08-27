@@ -6,6 +6,7 @@
     tools:context="com.pump.ia.fragment.form.share.FamilyFinanceFragment">
 
     <LinearLayout
+        android:orientation="vertical"
         android:background="@color/white"
         android:layout_margin="3dp"
         android:elevation="6dp"
@@ -108,6 +109,43 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"></Spinner>
             </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_form_save"
+                android:background="@drawable/white_bg_blue_ripple"
+                android:layout_weight="1"
+                android:text="保存"
+                android:textColor="@color/blue_band_dark2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:singleLine="true" />
+
         </LinearLayout>
 
     </LinearLayout>

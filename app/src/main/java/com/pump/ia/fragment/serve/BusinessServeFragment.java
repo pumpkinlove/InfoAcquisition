@@ -13,6 +13,7 @@ import com.baoyz.widget.PullRefreshLayout;
 import com.pump.ia.R;
 import com.pump.ia.adapter.CustomerAdapter;
 import com.pump.ia.domain.SimpleCustomer;
+import com.pump.ia.domain.web.Person;
 
 import org.xutils.common.task.AbsTask;
 import org.xutils.view.annotation.ViewInject;
@@ -33,7 +34,7 @@ public class BusinessServeFragment extends Fragment {
     @ViewInject(R.id.rv_business)
     private RecyclerView rv_business;
 
-    private List<SimpleCustomer> customerList;
+    private List<Person> customerList;
 
     private CustomerAdapter adapter;
 
@@ -57,7 +58,7 @@ public class BusinessServeFragment extends Fragment {
 
     private void initData(){
         customerList = new ArrayList<>();
-        adapter = new CustomerAdapter(customerList ,getContext());
+//        adapter = new CustomerAdapter(customerList ,getContext());
 
     }
 
@@ -73,9 +74,8 @@ public class BusinessServeFragment extends Fragment {
                     @Override
                     protected String doBackground() throws Throwable {
                         Thread.sleep(3000);
-                        SimpleCustomer customer = new SimpleCustomer();
+                        Person customer = new Person();
                         customer.setName("测试" + new Random().nextInt(100));
-                        customer.setFollow("未关注");
                         customerList.add(customer);
 
                         return "ok";

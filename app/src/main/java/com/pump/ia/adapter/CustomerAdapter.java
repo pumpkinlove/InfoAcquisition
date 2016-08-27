@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.pump.ia.R;
 import com.pump.ia.domain.SimpleCustomer;
+import com.pump.ia.domain.web.Person;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -22,11 +23,11 @@ import java.util.zip.Inflater;
  */
 public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.CustomerViewHolder> {
 
-    private List<SimpleCustomer> customerList;
+    private List<Person> customerList;
     private Context context;
     private CustomerClickListener listener;
 
-    public CustomerAdapter(List<SimpleCustomer> customerList, Context context) {
+    public CustomerAdapter(List<Person> customerList, Context context) {
         this.customerList = customerList;
         this.context = context;
     }
@@ -39,16 +40,10 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
     @Override
     public void onBindViewHolder(CustomerViewHolder holder, int position) {
 
-        holder.tv_name.setText(customerList.get(position).getName());
-        holder.tv_type.setText(customerList.get(position).getType());
-        holder.tv_follow.setText(customerList.get(position).getFollow());
-        if("关注".equals(customerList.get(position).getFollow())){
-            holder.tv_follow.setTextColor(context.getResources().getColor(R.color.green));
-
-        }else if("未关注".equals(customerList.get(position).getFollow())){
-            holder.tv_follow.setTextColor(context.getResources().getColor(R.color.red_dark));
-
-        }
+        holder.tv_customer_name.setText(customerList.get(position).getName());
+        holder.tv_gender.setText(customerList.get(position).getSex());
+        holder.tv_certificate.setText(customerList.get(position).getCardNo());
+        holder.tv_mobile.setText(customerList.get(position).getMobile());
 
     }
 
@@ -61,11 +56,13 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
 
         private CustomerClickListener listener;
         @ViewInject(R.id.tv_customer_name)
-        private TextView tv_name;
-        @ViewInject(R.id.tv_customer_type)
-        private TextView tv_type;
-        @ViewInject(R.id.tv_follow)
-        private TextView tv_follow;
+        private TextView tv_customer_name;
+        @ViewInject(R.id.tv_gender)
+        private TextView tv_gender;
+        @ViewInject(R.id.tv_certificate)
+        private TextView tv_certificate;
+        @ViewInject(R.id.tv_mobile)
+        private TextView tv_mobile;
         @ViewInject(R.id.ll_customer)
         private LinearLayout ll_customer;
 
@@ -78,7 +75,9 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
 
         @Override
         public void onClick(View view) {
-            listener.onItemClick(view, getPosition());
+            if(listener != null){
+                listener.onItemClick(view, getPosition());
+            }
         }
     }
 

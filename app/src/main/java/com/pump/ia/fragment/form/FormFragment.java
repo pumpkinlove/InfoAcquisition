@@ -4,6 +4,7 @@ package com.pump.ia.fragment.form;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ import com.pump.ia.R;
 import com.pump.ia.activity.form.BusinessFormActivity;
 import com.pump.ia.activity.form.RuralFormActivity;
 import com.pump.ia.activity.form.ToPublicFormActivity;
-import com.pump.ia.activity.form.UrbanFormActivity;
+import com.pump.ia.activity.form.UrbanListActivity;
 
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -27,10 +28,11 @@ public class FormFragment extends Fragment {
     @ViewInject(R.id.title_middle)
     private TextView title_middle;
 
+    private FragmentTransaction transaction;
+
     public FormFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,7 +48,6 @@ public class FormFragment extends Fragment {
     }
 
     private void initData(){
-
     }
 
     private void initView(){
@@ -56,8 +57,9 @@ public class FormFragment extends Fragment {
     @Event(value = {R.id.urbanForm,R.id.ruralForm,R.id.businessForm,R.id.toPublicForm})
     private void toFillForm(View view){
         switch (view.getId()){
+
             case R.id.urbanForm:
-                startActivity(new Intent(getActivity(), UrbanFormActivity.class));
+                startActivity(new Intent(getActivity(), UrbanListActivity.class));
                 break;
             case R.id.ruralForm:
                 startActivity(new Intent(getActivity(), RuralFormActivity.class));

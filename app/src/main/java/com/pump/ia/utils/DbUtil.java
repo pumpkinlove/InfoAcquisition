@@ -3,6 +3,7 @@ package com.pump.ia.utils;
 import android.os.Environment;
 
 import org.xutils.DbManager;
+import org.xutils.x;
 
 import java.io.File;
 
@@ -28,4 +29,5 @@ public class DbUtil {
         }
         return daoConfig;
     }
+
 }

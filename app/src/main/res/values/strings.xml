@@ -11,7 +11,8 @@
 
     <string-array name="certificateType">
         <item>身份证</item>
-        <item>护照</item>
+        <item>驾驶证</item>
+        <item>军官证</item>
     </string-array>
 
 </resources>

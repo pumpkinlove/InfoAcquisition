@@ -5,6 +5,10 @@
     android:background="@color/gray_bg"
     tools:context="com.pump.ia.fragment.index.IndexFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -12,10 +16,9 @@
         <include layout="@layout/layout_title"/>
 
         <com.pump.ia.view.SlideShowView
-            android:layout_weight="2"
             android:id="@+id/slideshowView"
             android:layout_width="match_parent"
-            android:layout_height="0dp"/>
+            android:layout_height="130dp"/>
 
         <View
             android:background="@color/gray_light"
@@ -25,7 +28,7 @@
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="horizontal"
             android:clickable="true"
-            android:background="@color/blue_band_light"
+            android:background="@color/red_dark"
             android:layout_width="match_parent"
             android:layout_height="40dp">
 
@@ -49,7 +52,7 @@
             android:id="@+id/pr_notification"
             android:layout_weight="4"
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="250dp">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_notification"
@@ -61,8 +64,6 @@
             </android.support.v7.widget.RecyclerView>
 
         </com.baoyz.widget.PullRefreshLayout>
-
-
 
         <View
             android:background="@color/gray_light"
@@ -93,7 +94,7 @@
 
             <TextView
                 android:textColor="@color/white"
-                android:text="客户名称"
+                android:text="客户姓名"
                 android:paddingLeft="20dp"
                 android:gravity="center"
                 android:layout_weight="1"
@@ -103,7 +104,7 @@
 
             <TextView
                 android:textColor="@color/white"
-                android:text="kehuleixing"
+                android:text="客户类型"
                 android:paddingLeft="20dp"
                 android:gravity="center"
                 android:layout_weight="1"
@@ -143,7 +144,7 @@
             android:id="@+id/pr_remind"
             android:layout_weight="5"
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="250dp">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_remind"
@@ -157,7 +158,100 @@
 
         </com.baoyz.widget.PullRefreshLayout>
 
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <TextView
+            android:background="@color/gold"
+            android:textColor="@color/white"
+            android:text="客户生日提醒"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="客户姓名"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="客户类型"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="出生日期"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="联系方式"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <com.baoyz.widget.PullRefreshLayout
+            android:id="@+id/pr_birthday"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_birthday"
+                android:clickable="true"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+        </com.baoyz.widget.PullRefreshLayout>
 
 
     </LinearLayout>
+    </ScrollView>
 </FrameLayout>

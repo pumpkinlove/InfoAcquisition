@@ -1,5 +1,6 @@
 package com.pump.ia.activity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -9,16 +10,30 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.nostra13.universalimageloader.utils.L;
 import com.pump.ia.R;
+import com.pump.ia.domain.Config;
+import com.pump.ia.domain.ResponseEntity;
 import com.pump.ia.domain.Version;
+import com.pump.ia.domain.web.Notice;
+import com.pump.ia.domain.web.Worker;
 import com.pump.ia.utils.CommonUtil;
+import com.pump.ia.utils.DbUtil;
+import com.pump.ia.utils.XUtil;
 
+import org.xutils.common.Callback;
+import org.xutils.ex.DbException;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -28,7 +43,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 @ContentView(R.layout.activity_login)
 public class LoginActivity extends BaseActivity implements AMapLocationListener {
@@ -37,6 +54,13 @@ public class LoginActivity extends BaseActivity implements AMapLocationListener 
     private TextView tv_version;
 
     private Version curVersion;
+
+    @ViewInject(R.id.et_workercode)
+    private TextView tv_workercode;
+    @ViewInject(R.id.et_password)
+    private TextView tv_password;
+
+    private Worker worker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +73,11 @@ public class LoginActivity extends BaseActivity implements AMapLocationListener 
 
     @Override
     protected void initData() {
-
+        try {
+            worker = x.getDb(DbUtil.getDaoConfig()).findFirst(Worker.class);
+        } catch (DbException e) {
+            e.printStackTrace();
+        }
         curVersion = CommonUtil.getCurVersion(this);
 
     }
@@ -62,10 +90,10 @@ public class LoginActivity extends BaseActivity implements AMapLocationListener 
         }
     }
 
-    @Event(value={R.id.tv_login},type=View.OnClickListener.class)
-    private void login(View view) {
+
+//    private void login(View view) {
 //        getSHA1(view);
-        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//        startActivity(new Intent(LoginActivity.this, MainActivity.class));
         //声明mLocationOption对象
 //        AMapLocationClientOption mLocationOption = null;
 //        AMapLocationClient mlocationClient = new AMapLocationClient(this);
@@ -89,7 +117,7 @@ public class LoginActivity extends BaseActivity implements AMapLocationListener 
 //        mlocationClient.startLocation();
 
 
-    }
+//    }
 
     private void getSHA1(View view){
         Log.e("==========",getSHA1(getApplicationContext()));
@@ -157,4 +185,83 @@ public class LoginActivity extends BaseActivity implements AMapLocationListener 
             }
         }
     }
+
+    @Event(value={R.id.tv_login},type=View.OnClickListener.class)
+    private void login(View view){
+        if(tv_workercode.getText().length() == 0 || tv_password.getText().length() == 0){
+            return;
+        }
+        Map<String, Object> params = new HashMap<>();
+        params.put("workerCode", tv_workercode.getText().toString());
+        params.put("password", tv_password.getText().toString());
+        Config config = CommonUtil.getConfig();
+        String url = "http://"+config.getIp()+":"+config.getPort()+"/customer/mobile/worker/login";
+        Log.e("----",url);
+        final ProgressDialog pd = new ProgressDialog(this);
+        pd.setMessage("正在登录...");
+        pd.setCanceledOnTouchOutside(false);
+        pd.show();
+        XUtil.Post(url, params, new Callback.CommonCallback<String>() {
+
+            @Override
+            public void onSuccess(String result) {
+                Gson g = new Gson();
+                ResponseEntity<Worker> resp = JSON.parseObject(
+                        result,
+                        new TypeReference<ResponseEntity<Worker>>() {}
+                );
+
+                Log.e("---------",resp.getCode());
+                Log.e("---------",resp.getMessage());
+
+                if(!"200".equals(resp.getCode())){
+                    CommonUtil.MyAlert(resp.getMessage(),getFragmentManager(),"login_error");
+                    return;
+                }
+
+                try {
+                    if(worker == null){
+                        worker = resp.getData();
+                        if(worker == null){
+                            Log.e("---------","null");
+                            return;
+                        }
+                        Log.e("---------",worker.getId()+"");
+                        x.getDb(DbUtil.getDaoConfig()).save(worker);
+                    }else{
+                        worker = resp.getData();
+                        if(worker == null){
+                            Log.e("---------","null");
+                            return;
+                        }
+                        x.getDb(DbUtil.getDaoConfig()).saveOrUpdate(worker);
+                    }
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                } catch (Exception e) {
+                    Log.e("-----eee----",e.getMessage());
+                    e.printStackTrace();
+                }
+                Log.e("----","onSuccess");
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+                CommonUtil.MyAlert(" >_< 网络开小差啦 ~",getFragmentManager(),"network_error");
+                Log.e("----","onError"+ex.getMessage());
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+                Log.e("----","onCancelled");
+            }
+
+            @Override
+            public void onFinished() {
+                pd.dismiss();
+                Log.e("----","onFinished");
+            }
+        });
+    }
+
+
 }

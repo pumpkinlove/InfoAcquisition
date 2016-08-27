@@ -8,9 +8,13 @@ import android.view.Gravity;
 import android.view.View;
 
 import com.pump.ia.R;
+import com.pump.ia.domain.Config;
 import com.pump.ia.domain.Version;
+import com.pump.ia.domain.web.Worker;
 import com.pump.ia.view.JoshuaDialog;
 
+import org.xutils.DbManager;
+import org.xutils.ex.DbException;
 import org.xutils.x;
 
 /**
@@ -38,6 +42,30 @@ public class CommonUtil {
         dialog.setErrorFlag(true);
         dialog.show(fragmentManager, tag);
         return dialog;
+    }
+
+    public static Config getConfig(){
+        DbManager.DaoConfig daoConfig = DbUtil.getDaoConfig();
+        DbManager dbManager = x.getDb(daoConfig);
+        try {
+            Config config = dbManager.findFirst(Config.class);
+            return config;
+        } catch (DbException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static Worker geWorker(){
+        DbManager.DaoConfig daoConfig = DbUtil.getDaoConfig();
+        DbManager dbManager = x.getDb(daoConfig);
+        try {
+            Worker worker = dbManager.findFirst(Worker.class);
+            return worker;
+        } catch (DbException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

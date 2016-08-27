@@ -20,6 +20,7 @@ import com.google.gson.Gson;
 import com.pump.ia.R;
 import com.pump.ia.activity.home.ConfigActivity;
 import com.pump.ia.domain.Version;
+import com.pump.ia.domain.web.Worker;
 import com.pump.ia.utils.CommonUtil;
 import com.pump.ia.utils.XUtil;
 import com.pump.ia.view.JoshuaDialog;
@@ -41,6 +42,8 @@ public class HomeFragment extends Fragment {
     private JoshuaDialog logoutDialog;
     private JoshuaUpdateDialog updateDialog;
     private ProgressDialog pd_check_version;
+
+    private Worker worker;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -66,10 +69,15 @@ public class HomeFragment extends Fragment {
         pd_check_version = new ProgressDialog(getContext());
         pd_check_version.setMessage("正在检查更新...");
         pd_check_version.setCanceledOnTouchOutside(false);
+
+        worker = CommonUtil.geWorker();
+
     }
 
     private void initView() {
         tv_middleContent.setText("我");
+
+
     }
 
     @Event(value = R.id.ll_config)

@@ -34,4 +34,13 @@ public class Notification implements Serializable {
     public void setTime(String time) {
         this.time = time;
     }
+
+    public Notification() {
+    }
+
+    public Notification(String id, String content, String time) {
+        this.id = id;
+        this.content = content;
+        this.time = time;
+    }
 }

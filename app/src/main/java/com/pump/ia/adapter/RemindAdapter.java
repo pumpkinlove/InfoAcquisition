@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.pump.ia.R;
 import com.pump.ia.domain.Remind;
+import com.pump.ia.domain.web.MyBankBussiness;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -20,11 +21,11 @@ import java.util.List;
  */
 public class RemindAdapter extends RecyclerView.Adapter<RemindAdapter.RemindViewHolder> {
 
-    private List<Remind> remindList;
+    private List<MyBankBussiness> remindList;
     private Context context;
     private RemindListener listener;
 
-    public RemindAdapter(List<Remind> remindList, Context context) {
+    public RemindAdapter(List<MyBankBussiness> remindList, Context context) {
         this.remindList = remindList;
         this.context = context;
     }
@@ -36,10 +37,10 @@ public class RemindAdapter extends RecyclerView.Adapter<RemindAdapter.RemindView
 
     @Override
     public void onBindViewHolder(RemindViewHolder holder, int position) {
-        holder.tv_name.setText(remindList.get(position).getCustomerName());
-        holder.tv_type.setText(remindList.get(position).getCustomerType());
-        holder.tv_money.setText(remindList.get(position).getDeposit());
-        holder.tv_time.setText(remindList.get(position).getExpire());
+        holder.tv_name.setText(remindList.get(position).getCustName());
+        holder.tv_type.setText(remindList.get(position).getCustTypeVal());
+        holder.tv_money.setText(remindList.get(position).getBusVal()+"");
+        holder.tv_time.setText(remindList.get(position).getEndDate());
     }
 
     @Override

@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.pump.ia.R;
 import com.pump.ia.domain.Notification;
+import com.pump.ia.domain.web.Notice;
+import com.pump.ia.utils.DateUtil;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -22,10 +24,10 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
     private NotificationListener listener;
 
-    private List<Notification> notificationList;
+    private List<Notice> notificationList;
     private Context context;
 
-    public NotificationAdapter(List<Notification> notificationList, Context context) {
+    public NotificationAdapter(List<Notice> notificationList, Context context) {
         this.notificationList = notificationList;
         this.context = context;
     }
@@ -37,8 +39,8 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
     @Override
     public void onBindViewHolder(NotificationViewHolder holder, int position) {
-        holder.tv_notification_content.setText(notificationList.get(position).getContent());
-        holder.tv_notification_time.setText(notificationList.get(position).getTime());
+        holder.tv_notification_content.setText(notificationList.get(position).getTitle());
+        holder.tv_notification_time.setText(DateUtil.toAll(notificationList.get(position).getUpdateDate()));
     }
 
     @Override
@@ -74,6 +76,10 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
     interface NotificationListener{
         void onItemClick(View view, int position);
+    }
+
+    public void setNotificationList(List<Notice> notificationList){
+        this.notificationList = notificationList;
     }
 
 }

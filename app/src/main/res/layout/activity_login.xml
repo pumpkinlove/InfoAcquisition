@@ -75,6 +75,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <EditText
+                    android:text="000001"
                     android:textColorHint="@color/blue_band_dark3"
                     android:textColor="@color/white"
                     android:gravity="center|left"
@@ -82,7 +83,8 @@
                     android:background="@null"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:id="@+id/et_workercode" />
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -116,14 +118,17 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <EditText
+                    android:text="111"
                     android:textColor="@color/white"
                     android:gravity="center|left"
                     android:hint="密码"
+                    android:inputType="textPassword"
                     android:textColorHint="@color/blue_band_dark3"
                     android:background="@null"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:id="@+id/et_password" />
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

@@ -30,33 +30,47 @@
             android:layout_height="match_parent"/>
 
         <TextView
-            android:id="@+id/tv_customer_type"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
-
-        <View
-            android:background="@color/gray_light"
-            android:layout_width="1px"
-            android:layout_height="match_parent"/>
-
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
-
-        <View
-            android:background="@color/gray_light"
-            android:layout_width="1px"
-            android:layout_height="match_parent"/>
-
-        <TextView
-            android:id="@+id/tv_follow"
+            android:id="@+id/tv_gender"
+            android:hint="客户姓名"
+            android:textColorHint="@color/blue_band_dark2"
+            android:textColor="@color/blue_band_dark2"
             android:gravity="center"
             android:textSize="20sp"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"  />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_weight="1.2"
+            android:hint="客户姓名"
+            android:textColorHint="@color/blue_band_dark2"
+            android:textColor="@color/blue_band_dark2"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_certificate" />
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:hint="客户姓名"
+            android:textColorHint="@color/blue_band_dark2"
+            android:textColor="@color/blue_band_dark2"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"  />
 
     </LinearLayout>
     <View
