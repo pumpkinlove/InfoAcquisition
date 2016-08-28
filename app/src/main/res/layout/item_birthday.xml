@@ -13,7 +13,6 @@
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:drawableLeft="@android:drawable/ic_menu_crop"
         android:id="@+id/tv_name" />
 
     <TextView

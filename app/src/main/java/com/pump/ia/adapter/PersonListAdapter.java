@@ -4,43 +4,38 @@ import java.util.List;
 
 import com.pump.ia.R;
 import com.pump.ia.domain.web.Person;
-
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class CusomerListAdapter extends BaseAdapter {
+public class PersonListAdapter extends BaseAdapter {
 
 	private Context contextwrapper;
-	private List<Person> cars;
+	private List<Person> personList;
 	public int getCount() {
-		return cars.size();
+		return personList.size();
 	}
 
 	public Object getItem(int position) {
-		return cars.get(position);
+		return personList.get(position);
 	}
 
 	public long getItemId(int position) {
 		return position;
 	}
 
-	public CusomerListAdapter(Context context) {
+	public PersonListAdapter(Context context) {
 		contextwrapper = context;
 	}
 
-	@SuppressWarnings("deprecation")
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View view = null;
 		try {
 			ViewHolder holder = new ViewHolder();
 			if (convertView == null) {
 				view = View.inflate(contextwrapper, R.layout.item_customer, null);
-				view.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.FILL_PARENT, 180));
 				holder = new ViewHolder();
 				holder.tv_name = (TextView) view.findViewById(R.id.tv_customer_name);
 				holder.tv_gender = (TextView) view.findViewById(R.id.tv_gender);
@@ -51,9 +46,8 @@ public class CusomerListAdapter extends BaseAdapter {
 				view = convertView;
 				holder = (ViewHolder) view.getTag();
 			}
-			Person c = cars.get(position);
+			Person c = personList.get(position);
 			if (c != null) {
-				Log.e("----------",c.getName());
 				holder.tv_name.setText(c.getName());
 				holder.tv_gender.setText(c.getSexVal());
 				holder.tv_certificate.setText(c.getCardNo());
@@ -72,8 +66,8 @@ public class CusomerListAdapter extends BaseAdapter {
 	}
 
 
-	public void setCars(List<Person> cars) {
-		this.cars = cars;
+	public void setPersonList(List<Person> personList) {
+		this.personList = personList;
 	}
 
 }

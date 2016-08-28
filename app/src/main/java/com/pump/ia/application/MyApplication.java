@@ -30,8 +30,8 @@ public class MyApplication extends Application {
                 Log.e("----------","config");
                 config = new Config();
                 config.setId(1);
-                config.setIp("192.168.1.104");
-                config.setPort("8088");
+                config.setIp("119.29.36.54");
+                config.setPort("8081");
                 dbManager.save(config);
             }
         } catch (DbException e) {

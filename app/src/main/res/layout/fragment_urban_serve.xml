@@ -3,21 +3,91 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
-
-    <com.baoyz.widget.PullRefreshLayout
-        android:id="@+id/pr_urban"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_urban"
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/blue_band_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_customer"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:background="@color/blue_band_light"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="50dp">
+
+            <TextView
+                android:text="客户姓名"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_weight="1.2"
+                android:textColorHint="@color/blue_band_dark2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="证件号码" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:textColorHint="@color/blue_band_dark2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="性别" />
 
 
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
 
-        </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:textColorHint="@color/blue_band_dark2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="联系方式" />
 
-    </com.baoyz.widget.PullRefreshLayout>
+        </LinearLayout>
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
 
+    </LinearLayout>
+
+    <com.pump.ia.view.XListView
+        android:id="@+id/xlv_serve_urban"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </LinearLayout>
 </FrameLayout>

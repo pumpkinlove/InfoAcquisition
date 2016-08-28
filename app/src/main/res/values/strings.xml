@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">InfoAcquisition</string>
+    <string name="app_name">爱客户</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="more">...</string>
     <string-array name="marry_status">
         <item>未婚</item>
         <item>已婚</item>

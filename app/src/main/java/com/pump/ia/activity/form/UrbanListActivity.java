@@ -2,10 +2,6 @@ package com.pump.ia.activity.form;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -15,7 +11,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.pump.ia.R;
 import com.pump.ia.activity.BaseActivity;
-import com.pump.ia.adapter.CusomerListAdapter;
+import com.pump.ia.adapter.PersonListAdapter;
 import com.pump.ia.domain.Config;
 import com.pump.ia.domain.ResponseEntity;
 import com.pump.ia.domain.web.Citizen;
@@ -43,23 +39,18 @@ public class UrbanListActivity extends BaseActivity implements XListView.IXListV
     @ViewInject(R.id.pv_urban_list)
     private XListView pv_urban_list;
 
-    private RecyclerView rv_urban_list;
-
-//    private CustomerAdapter customerAdapter;
     @ViewInject(R.id.title_middle)
     private TextView title_middle;
+
     @ViewInject(R.id.title_left)
     private TextView title_left;
-
-    private boolean isLoading =false;
-    private boolean isHasLoadedAll =false;
 
     private List<Person> personList;
     private int start = 1;
     private int total = 0;
     private boolean isClear;
 
-    private CusomerListAdapter listAdapter;
+    private PersonListAdapter listAdapter;
 
 
     @Override
@@ -75,13 +66,14 @@ public class UrbanListActivity extends BaseActivity implements XListView.IXListV
     @Override
     protected void initData() {
         personList = new ArrayList<>();
-//        customerAdapter = new CustomerAdapter(personList, this);
-        listAdapter = new CusomerListAdapter(this);
-        listAdapter.setCars(personList);
+        listAdapter = new PersonListAdapter(this);
+        listAdapter.setPersonList(personList);
     }
 
     @Override
     protected void initView() {
+        title_left.setVisibility(View.VISIBLE);
+        title_middle.setText("城镇客户");
         pv_urban_list.setPullLoadEnable(true);
         pv_urban_list.setPullRefreshEnable(true);
         pv_urban_list.setXListViewListener(this);
@@ -126,7 +118,7 @@ public class UrbanListActivity extends BaseActivity implements XListView.IXListV
                         return;
                     }
                     personList.addAll(personPage.getRows());
-                    listAdapter.setCars(personList);
+                    listAdapter.setPersonList(personList);
                     listAdapter.notifyDataSetChanged();
 
                     Log.e("---------","onSuccess" + start +"total" + total);
@@ -176,6 +168,11 @@ public class UrbanListActivity extends BaseActivity implements XListView.IXListV
     @Event(value = R.id.fab_submit_form_urban)
     private void urban_form_submit(View view){
         startActivity(new Intent(UrbanListActivity.this, UrbanFormActivity.class));
+    }
+
+    @Event(value = R.id.title_left)
+    private void goBack(View view){
+        finish();
     }
 
 }

@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/ll_customer"
-        android:clickable="true"
+        android:id="@+id/ll_person"
         android:orientation="horizontal"
-        android:background="@drawable/white_bg_blue_ripple"
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
         <TextView
             android:id="@+id/tv_customer_name"
-            android:hint="客户姓名"
             android:textColorHint="@color/blue_band_dark2"
             android:textColor="@color/blue_band_dark2"
             android:gravity="center"
@@ -28,10 +24,24 @@
             android:background="@color/gray_light"
             android:layout_width="1px"
             android:layout_height="match_parent"/>
+        <TextView
+            android:layout_weight="1.2"
+            android:textColorHint="@color/blue_band_dark2"
+            android:textColor="@color/blue_band_dark2"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_certificate" />
+
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
 
         <TextView
             android:id="@+id/tv_gender"
-            android:hint="客户姓名"
             android:textColorHint="@color/blue_band_dark2"
             android:textColor="@color/blue_band_dark2"
             android:gravity="center"
@@ -46,24 +56,7 @@
             android:layout_height="match_parent"/>
 
         <TextView
-            android:layout_weight="1.2"
-            android:hint="客户姓名"
-            android:textColorHint="@color/blue_band_dark2"
-            android:textColor="@color/blue_band_dark2"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/tv_certificate" />
-
-        <View
-            android:background="@color/gray_light"
-            android:layout_width="1px"
-            android:layout_height="match_parent"/>
-
-        <TextView
             android:id="@+id/tv_mobile"
-            android:hint="客户姓名"
             android:textColorHint="@color/blue_band_dark2"
             android:textColor="@color/blue_band_dark2"
             android:gravity="center"

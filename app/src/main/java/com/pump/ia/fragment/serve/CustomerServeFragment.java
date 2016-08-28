@@ -71,7 +71,6 @@ public class CustomerServeFragment extends Fragment {
     }
 
     private void initData(){
-        customer = (SimpleCustomer) getArguments().get("customer");
 
 
         serveList = new ArrayList<>();
@@ -159,7 +158,7 @@ public class CustomerServeFragment extends Fragment {
         });
 
 
-        title_left.setVisibility(View.VISIBLE);
+//        title_left.setVisibility(View.VISIBLE);
 
 
     }

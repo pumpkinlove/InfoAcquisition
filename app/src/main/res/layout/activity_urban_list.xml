@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:fab="http://schemas.android.com/apk/res-auto">
@@ -19,8 +20,7 @@
             android:layout_height="50dp">
 
             <TextView
-                android:hint="客户姓名"
-                android:textColorHint="@color/blue_band_dark2"
+                android:text="客户姓名"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:textSize="20sp"
@@ -34,24 +34,7 @@
                 android:layout_height="match_parent"/>
 
             <TextView
-                android:hint="客户姓名"
-                android:textColorHint="@color/blue_band_dark2"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="性别" />
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="1px"
-                android:layout_height="match_parent"/>
-
-            <TextView
-                android:layout_weight="1"
-                android:hint="客户姓名"
+                android:layout_weight="1.2"
                 android:textColorHint="@color/blue_band_dark2"
                 android:textColor="@color/white"
                 android:gravity="center"
@@ -66,7 +49,22 @@
                 android:layout_height="match_parent"/>
 
             <TextView
-                android:hint="客户姓名"
+                android:textColorHint="@color/blue_band_dark2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="性别" />
+
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
                 android:textColorHint="@color/blue_band_dark2"
                 android:textColor="@color/white"
                 android:gravity="center"
@@ -84,7 +82,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -94,29 +92,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </com.pump.ia.view.XListView>
-    </LinearLayout>
-    <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:id="@+id/multiple_actions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        fab:fab_addButtonColorNormal="@color/gold"
-        fab:fab_addButtonColorPressed="@color/gold_dark"
-        fab:fab_addButtonPlusIconColor="@color/white"
-        fab:fab_labelStyle="@style/menu_labels_style"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp">
 
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_submit_form_urban"
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/multiple_actions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            fab:fab_colorNormal="@color/white"
-            fab:fab_title="添加新客户"
-            fab:fab_colorPressed="@color/blue_band_light"/>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            fab:fab_addButtonColorNormal="@color/gold"
+            fab:fab_addButtonColorPressed="@color/gold_dark"
+            fab:fab_addButtonPlusIconColor="@color/white"
+            fab:fab_labelStyle="@style/menu_labels_style"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp">
 
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
-</RelativeLayout>
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_submit_form_urban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_title="添加新客户"
+                fab:fab_colorPressed="@color/blue_band_light"/>
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </RelativeLayout>
+
+</LinearLayout>
