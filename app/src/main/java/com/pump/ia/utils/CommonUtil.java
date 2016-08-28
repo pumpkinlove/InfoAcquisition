@@ -1,11 +1,13 @@
 package com.pump.ia.utils;
 
+import android.app.DatePickerDialog;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.DatePicker;
 
 import com.pump.ia.R;
 import com.pump.ia.domain.Config;
@@ -67,5 +69,26 @@ public class CommonUtil {
             return null;
         }
     }
+
+//    private DatePickerDialog getDatePicker(){
+//        Calendar calendar = Calendar.getInstance();
+//        int year = calendar.get(Calendar.YEAR);
+//        int month = calendar.get(Calendar.MONTH);
+//        int day = calendar.get(Calendar.DAY_OF_MONTH);
+//
+//        return new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+//            @Override
+//            public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+//
+//            }
+//
+//            @Override
+//            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+//                String str = String.format("%04d-%02d-%02d", year, monthOfYear+1, dayOfMonth);
+//                taskdatetv.setText(str);
+//                refreshList();
+//            }
+//        }, year, month, day);
+//    }
 
 }

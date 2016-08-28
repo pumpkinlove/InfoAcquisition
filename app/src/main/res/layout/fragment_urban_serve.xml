@@ -44,38 +44,53 @@
                 android:textSize="20sp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="证件号码" />
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="1px"
-                android:layout_height="match_parent"/>
-
-            <TextView
-                android:textColorHint="@color/blue_band_dark2"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="性别" />
-
-
-            <View
-                android:background="@color/gray_light"
-                android:layout_width="1px"
-                android:layout_height="match_parent"/>
-
-            <TextView
-                android:textColorHint="@color/blue_band_dark2"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:text="联系方式" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:textColorHint="@color/blue_band_dark2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="服务次数" />
+
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:textColorHint="@color/blue_band_dark2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="最近服务" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:textColorHint="@color/blue_band_dark2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="" />
 
         </LinearLayout>
         <View

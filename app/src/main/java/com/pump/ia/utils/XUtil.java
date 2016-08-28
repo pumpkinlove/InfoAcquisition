@@ -31,6 +31,7 @@ public class XUtil {
      */
     public static <T> Callback.Cancelable Post(String url, Map<String,Object> map, Callback.CommonCallback<T> callback){
         RequestParams params = new RequestParams(url);
+        params.setConnectTimeout(30000);
         if(null!=map){
             for(Map.Entry<String, Object> entry : map.entrySet()){
                 params.addParameter(entry.getKey(), entry.getValue());

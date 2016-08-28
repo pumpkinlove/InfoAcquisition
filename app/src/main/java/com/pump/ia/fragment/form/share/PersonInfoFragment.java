@@ -17,11 +17,11 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.pump.ia.R;
+import com.pump.ia.activity.form.UrbanFormActivity;
 import com.pump.ia.domain.Config;
 import com.pump.ia.domain.ResponseEntity;
 import com.pump.ia.domain.sheetContent.PersonInfo;
 import com.pump.ia.domain.web.Citizen;
-import com.pump.ia.domain.web.Page;
 import com.pump.ia.domain.web.Worker;
 import com.pump.ia.utils.CommonUtil;
 import com.pump.ia.utils.XUtil;
@@ -31,6 +31,7 @@ import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,7 +42,15 @@ public class PersonInfoFragment extends Fragment {
 
     private Citizen citizen;
 
+    public Citizen getCitizen() {
+        return citizen;
+    }
+
     private DatePickerDialog datePickerDialog;
+    String dateSet;
+    Calendar calendar;
+
+
 
     private PersonInfo personInfo = new PersonInfo();
 
@@ -88,7 +97,8 @@ public class PersonInfoFragment extends Fragment {
     }
 
     private void initData(){
-        citizen = new Citizen();
+        citizen = ((UrbanFormActivity)getActivity()).getCitizen();
+
     }
 
     private void initView(){
@@ -100,9 +110,7 @@ public class PersonInfoFragment extends Fragment {
         sp_cetificate_type.setAdapter(new ArrayAdapter<>(getActivity(),
                 android.R.layout.simple_spinner_dropdown_item, cetificate_status));
 
-
     }
-
 
     @Event(value = R.id.tv_form_save)
     private void saveForm(View view){
@@ -111,7 +119,9 @@ public class PersonInfoFragment extends Fragment {
         if(config == null || worker == null){
             return;
         }
-
+        if(citizen == null){
+            citizen = new Citizen();
+        }
         citizen.setName(f_name.getText().toString());
         citizen.setSex("1");
         citizen.setNation("1");
@@ -144,18 +154,20 @@ public class PersonInfoFragment extends Fragment {
             public void onSuccess(String result) {
                 try {
                     Log.e("-----2----",result);
-                    ResponseEntity<Citizen> resp = JSON.parseObject(
+                    ResponseEntity<String> resp = JSON.parseObject(
                             result,
-                            new TypeReference<ResponseEntity<Citizen>>() {}
+                            new TypeReference<ResponseEntity<String>>() {}
                     );
 
                     if(!"200".equals(resp.getCode())){
                         CommonUtil.MyAlert(resp.getMessage(),getActivity().getFragmentManager(),"notice_list_error");
                         return;
                     }else{
+                        String familyCode = resp.getData();
+                        citizen.setFamilyCode(familyCode);
                         Toast.makeText(getContext(),"保存成功",Toast.LENGTH_LONG).show();
+                        ((UrbanFormActivity)getActivity()).setCitizen(citizen);
                     }
-
                 }catch (Exception e){
                     Log.e("----e-----",e.toString());
                 }

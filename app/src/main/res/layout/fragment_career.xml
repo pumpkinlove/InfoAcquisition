@@ -37,7 +37,8 @@
                 android:layout_weight="7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:id="@+id/f_career" />
 
         </LinearLayout>
 
@@ -71,7 +72,8 @@
                 android:layout_weight="7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:id="@+id/f_work" />
 
         </LinearLayout>
 
@@ -105,7 +107,8 @@
                 android:layout_weight="7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:id="@+id/f_job" />
 
         </LinearLayout>
 
@@ -139,7 +142,8 @@
                 android:layout_weight="7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:id="@+id/f_industry" />
 
         </LinearLayout>
 
@@ -173,7 +177,8 @@
                 android:layout_weight="7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:id="@+id/f_department" />
 
         </LinearLayout>
 
@@ -207,7 +212,8 @@
                 android:layout_weight="7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:id="@+id/f_isOrg" />
 
         </LinearLayout>
 

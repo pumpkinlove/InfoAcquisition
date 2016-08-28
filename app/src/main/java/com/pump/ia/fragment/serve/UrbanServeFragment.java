@@ -19,6 +19,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.baoyz.widget.PullRefreshLayout;
 import com.pump.ia.R;
 import com.pump.ia.adapter.CustomerAdapter;
+import com.pump.ia.adapter.CustomerServeAdapter;
 import com.pump.ia.adapter.PersonListAdapter;
 import com.pump.ia.domain.Config;
 import com.pump.ia.domain.ResponseEntity;
@@ -51,18 +52,18 @@ public class UrbanServeFragment extends Fragment implements XListView.IXListView
     private boolean isClear;
     private int total = 0;
 
+    private Worker worker;
 
     @ViewInject(R.id.xlv_serve_urban)
     private XListView xlv_serve_urban;
 
     private List<Person> citizenList;
 
-    private PersonListAdapter adapter;
+    private CustomerServeAdapter adapter;
 
     public UrbanServeFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -84,8 +85,9 @@ public class UrbanServeFragment extends Fragment implements XListView.IXListView
     }
 
     private void initData(){
+        worker = CommonUtil.geWorker();
         citizenList = new ArrayList<>();
-        adapter = new PersonListAdapter(getContext());
+        adapter = new CustomerServeAdapter(getContext());
         adapter.setPersonList(citizenList);
     }
 
@@ -114,11 +116,14 @@ public class UrbanServeFragment extends Fragment implements XListView.IXListView
         if(config == null || worker == null){
             return;
         }
-        String url  = "http://"+config.getIp()+":"+config.getPort()+"/customer/mobile/citizen/findCitizensByOrgCode";
+        String url  = "http://"+config.getIp()+":"+config.getPort()+"/customer/mobile/citizen/findBbsCitizens";
         Log.e("---------",url);
         Map<String, Object> params = new HashMap<>();
+
+        params.put("id", worker.getId());
         params.put("page", page);
-        params.put("orgCode", worker.getOrgCode());
+        params.put("custName", "");
+        params.put("orgNode", worker.getOrgNode());
 
         XUtil.Post(url, params, new Callback.CommonCallback<String>() {
             @Override

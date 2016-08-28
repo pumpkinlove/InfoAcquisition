@@ -12,6 +12,7 @@ import com.pump.ia.R;
 import com.pump.ia.activity.BaseActivity;
 import com.pump.ia.adapter.FormTitlesAdapter;
 import com.pump.ia.adapter.MyFragmentAdapter;
+import com.pump.ia.domain.web.Citizen;
 import com.pump.ia.fragment.form.share.BankBusinessFragment;
 import com.pump.ia.fragment.form.share.ConclusionFragment;
 import com.pump.ia.fragment.form.share.FamilyAssetsFragment;
@@ -35,6 +36,16 @@ import fr.castorflex.android.verticalviewpager.VerticalViewPager;
 
 @ContentView(R.layout.activity_urban_form)
 public class UrbanFormActivity extends BaseActivity {
+
+    private Citizen citizen;
+
+    public Citizen getCitizen() {
+        return citizen;
+    }
+
+    public void setCitizen(Citizen citizen) {
+        this.citizen = citizen;
+    }
 
     @ViewInject(R.id.title_middle)
     private TextView title_middle;
@@ -79,6 +90,8 @@ public class UrbanFormActivity extends BaseActivity {
     }
     @Override
     protected void initData() {
+
+        citizen = new Citizen();
 
         titlesAdapter = new FormTitlesAdapter(TITLES, this);
 

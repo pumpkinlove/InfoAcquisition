@@ -38,7 +38,8 @@
                 android:focusableInTouchMode="true"
                 android:focusable="true"
                 android:fitsSystemWindows="true"
-                android:longClickable="true" />
+                android:longClickable="true"
+                android:id="@+id/f_family_name" />
 
             <View
                 android:background="@color/gray_light"
@@ -68,7 +69,8 @@
                 android:focusableInTouchMode="true"
                 android:focusable="true"
                 android:fitsSystemWindows="true"
-                android:longClickable="true" />
+                android:longClickable="true"
+                android:id="@+id/f_family_relationship" />
 
         </LinearLayout>
 
@@ -108,7 +110,8 @@
                 android:focusableInTouchMode="true"
                 android:focusable="true"
                 android:fitsSystemWindows="true"
-                android:longClickable="true" />
+                android:longClickable="true"
+                android:id="@+id/f_family_career" />
 
             <View
                 android:background="@color/gray_light"
@@ -129,16 +132,14 @@
                 android:layout_width="1px"
                 android:layout_height="match_parent"/>
 
-            <Spinner
+            <EditText
+                android:background="@color/white"
                 android:gravity="center"
                 android:textColor="@color/dark"
                 android:layout_weight="7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:focusableInTouchMode="true"
-                android:focusable="true"
-                android:fitsSystemWindows="true"
-                android:longClickable="true" />
+                android:id="@+id/f_family_annual_income" />
 
         </LinearLayout>
 
@@ -175,7 +176,8 @@
                 android:focusableInTouchMode="true"
                 android:focusable="true"
                 android:fitsSystemWindows="true"
-                android:longClickable="true" />
+                android:longClickable="true"
+                android:id="@+id/f_family_marry_state" />
 
             <View
                 android:background="@color/gray_light"
@@ -209,7 +211,8 @@
                 android:focusableInTouchMode="true"
                 android:focusable="true"
                 android:fitsSystemWindows="true"
-                android:longClickable="true" />
+                android:longClickable="true"
+                android:id="@+id/f_family_mobile" />
 
         </LinearLayout>
 
@@ -242,14 +245,32 @@
                 android:textColorHint="@color/gray_light"
                 android:gravity="center"
                 android:textColor="@color/dark"
-                android:layout_weight="10"
+                android:layout_weight="7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:singleLine="true"
                 android:focusableInTouchMode="true"
                 android:focusable="true"
                 android:fitsSystemWindows="true"
-                android:longClickable="true" />
+                android:longClickable="true"
+                android:id="@+id/f_family_certificate" />
+
+            <View
+                android:background="@color/gray_light"
+                android:layout_width="1px"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:text="保存"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:textColor="@color/blue_band_dark"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:id="@+id/tv_save_family_member" />
 
             <View
                 android:background="@color/gray_light"
@@ -261,7 +282,7 @@
                 android:clickable="true"
                 android:background="?attr/selectableItemBackground"
                 android:textColor="@color/red"
-                android:layout_weight="7"
+                android:layout_weight="5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:textSize="18sp"
